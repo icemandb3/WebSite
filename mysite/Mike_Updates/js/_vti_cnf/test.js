@@ -1,0 +1,12 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TW|15 Nov 2012 06:44:28 -0000
+vti_author:SR|Don-PC\\Don
+vti_modifiedby:SR|Don-PC\\Don
+vti_nexttolasttimemodified:TW|15 Nov 2012 06:44:28 -0000
+vti_timecreated:TR|17 Nov 2012 22:42:33 -0000
+vti_cacheddtm:TX|17 Nov 2012 22:42:33 -0000
+vti_filesize:IR|641
+vti_extenderversion:SR|12.0.0.0
+vti_backlinkinfo:VX|Mike_Updates/testcart/test.html
+vti_syncofs_ftp.lloydcenterice.info\:21:TW|15 Nov 2012 06:44:28 -0000
+vti_syncwith_ftp.lloydcenterice.info\:21:TW|17 Nov 2012 22:42:33 -0000

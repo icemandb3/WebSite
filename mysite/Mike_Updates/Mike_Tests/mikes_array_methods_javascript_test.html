@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<script type="text/javascript">
+var myNumberArray = new Array();
+function generateNumber()
+{
+	var randomNumber = Math.floor(Math.random() * 11);
+	myNumberArray.unshift(randomNumber);
+	alert("There are " + myNumberArray.length + " elements in the array. The first number in the array is now " + myNumberArray[0]);
+	/*var myNumber = randonNumber.toString();*/
+	var myText = document.createTextNode("Mike added this. ");
+	var myDivToAppend = document.getElementById("myHolder");
+	var myParagraph = document.createElement("p");
+	myParagraph.setAttribute('id', 'mikesText');
+	/*var myRandomNumberText = document.createTextNode(randomNumber);*/
+	document.getElementById("myHolder").appendChild(myText);
+	
+}
+
+function removeNumber()
+{
+	myNumberArray.pop();
+	alert("There are " + myNumberArray.length + " elements in the array. The first numer in the array is now " + myNumberArray[0]);
+}
+</script>
+
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Mikes Random JavaScript Test</title>
+</head>
+
+<body>
+
+<form id="mikeForm">
+	First name: <input id="fname" type="text"><br />
+	Last name: <input id="lname" type="text">
+</form>
+<br />
+<div id="myAddClick" onclick="generateNumber()">Click to add element</div>
+<br />
+<div id="mySubtractClick" onclick="removeNumber()">Click to remove element</div>
+<br />
+<div id="myHolder"></div>
+
+</body>
+
+</html>

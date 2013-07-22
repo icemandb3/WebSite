@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <div>First</div>
+  <div>Second</div>  
+  <div>Third</div>
+
+  <div>Fourth</div>
+<script>
+    var elems = document.getElementsByTagName("div"); // returns a nodeList
+    var arr = jQuery.makeArray(elems);
+    arr.reverse(); // use an Array method on list of dom elements
+    $(arr).appendTo(document.body);
+</script>
+
+
+
+
+
+</body>
+
+</html>

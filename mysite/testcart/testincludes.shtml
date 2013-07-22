@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title></title>
+<!-- #EndEditable -->
+<link href="../styles/style3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.min"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<!-- #BeginEditable "userscripts" -->
+
+<!-- #EndEditable -->
+
+</head>
+
+<body>
+
+<div id="main">
+
+
+<div id="mastheadcontainer" style="overflow:visible;"><!-- Begin mastheadontainer -->
+	<!--#include virtual="../includes/head.html" -->
+	
+
+</div><!-- End mastheadcontainer-->
+	
+	
+<div id="bodycontainer"><!-- Begin bodycontainer -->	
+	<!--<div id="page_content" style="overflow:auto;">--><!-- Begin Page Content -->
+		<!-- Begin Sidebar -->
+		<div id="lsidebar" style="left: 2px; top: 4px; height: 406px; width: 150px;">
+			<!--#include virtual="../includes/navigation.html" -->
+			
+		</div>
+		<!-- End Sidebar -->
+		<!-- Begin Content -->
+		<div id="content">
+			<!-- #BeginEditable "content" -->
+			<!-- #EndEditable -->
+		</div>
+		<div id="rsidebar" style="left: 2px; top: 4px; height: 406px;" align="center" class="auto-style1">
+			<div class="rbox" align="center">
+				<h1><a href="../SkatingLessons/sched.html">Skate School Sign Up</a></h1>
+				<p>Next session starts: 05/28 - 07/22</p>
+			</div>
+			<div class="rbox" align="center">
+				<h1><a href="../directions/KoolKamp/default.html">Kool Kamp 2012 Sign Up</a></h1>
+				<p>Week 1 session: 06/18 - 06/22</p>
+			</div>
+			
+		</div><!-- End Content -->
+	</div><!-- End bodycontainer -->
+	
+	
+	<div id="footercontainer">
+		<!--#include virtual="../includes/footer.html" -->
+		
+
+	</div><!-- End footercontainer -->
+</div><!-- End main -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-555618-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script  id='googlecart-script' type='text/javascript' src='https://checkout.google.com/seller/gsc/v2_2/cart.js?mid=516429928689994' integration='jscart-wizard' post-cart-to-sandbox='false' currency='USD' productWeightUnits='LB'></script>
+</body>
+
+</html>
+

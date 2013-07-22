@@ -1,0 +1,752 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../mastersales.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>Lloyd Center Ice Rink</title>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../js/skatelessons.js"></script>
+
+<!-- #EndEditable -->
+<link href="../styles/style3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.min"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<!-- #BeginEditable "userscripts" -->
+
+<script type="text/javascript">
+// change firstskcost to 89 after
+var SKATEPASS = 10.00;
+var GIFTCERTIFICATE = 89.00;
+var SKATECLASSCOST = 89.00;
+var MULTISKDISC = 21.00;
+var MULTICHRISDISC = 59.00;
+var EARLYDISC = 9.00;
+var MULTIKOOL = 795.00;
+var SINGLEKOOL = 219.00;
+var KOOLDEPOS = 50.00;
+
+
+function CheckIfCutoffPassed(){
+		var SignupCutOffDate=new Date("July 28, 2013 23:30");
+		SignupCutOffDate.setHours(21);
+		var cuDate = SignupCutOffDate.toLocaleDateString();
+		var cuTime = SignupCutOffDate.toLocaleTimeString(21);
+		var today = new Date();
+		var todayTime = today.toLocaleTimeString();
+		var todayDate = today.toLocaleDateString();
+	
+		if(today > SignupCutOffDate)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+$(document).ready(function() {
+	// on ready, clear values for all hidden input fields
+	
+	$('#product-title').val("")
+	$('#product-attr-description').val("")
+	$('#product-price').val("")
+	$('#sk-name').val("")
+	$('#erbox').hide();
+	$('#skater_fname').val("")
+	$('#skater_lname').val("")
+	
+
+	function ValidateFields(){
+		var fn = document.forms["classes_form"]["skater_fname"].value;
+		var ln = document.forms["classes_form"]["skater_lname"].value;
+		var dt = $('#select_day_time option:selected').val();
+		var pattnumfname = /\d/;
+		var pattnumlname = /\d/;
+		var pattsymfname = /\W/;
+		var pattsymlname = /\W/;
+		
+		// [a-zA-Z]+  - tests for 1 or more more occurrences of letters
+		// /\W/ - matches any non word character in a string
+		
+		var fnHasNum = pattnumfname.test(fn);
+		var lnHasNum = pattnumlname.test(ln);
+		var fnHasSym = pattsymfname.test(fn);
+		var lnHasSym = pattsymlname.test(ln);	
+		
+		if (fn=="" || fn==null || ln=="" || ln==null || dt=="daytime" || dt==null || fnHasNum == true || lnHasNum == true || fnHasNum == true || lnHasNum == true)
+		{
+			$('#erbox').show();
+			return false;
+		}
+		else
+		{
+			$('#erbox').hide();
+			return true;
+		}
+	}
+	
+	function CreateSkaterNameString(){
+		var fn = document.forms["classes_form"]["skater_fname"].value;
+		var ln = document.forms["classes_form"]["skater_lname"].value;
+		var descriptionName;
+		fn = $.trim(fn);
+		ln = $.trim(ln);
+		descriptionName = fn.toUpperCase() + " " + ln.toUpperCase();
+		return descriptionName;
+	}
+	
+	
+	function DetermineItemType(){
+		var itemType = $('select[name="select_class"]').val();
+		var CheckForCertificate = /Certificate$/;
+		var CheckForPass = /Pass$/;
+		var CheckForKoolKamp = /^Kool/;
+		if(CheckForCertificate.exec(itemType)){
+			itemType = CheckForCertificate.exec(itemType);
+			return itemType;
+		} else if (CheckForPass.exec(itemType)) {
+			itemType = CheckForPass.exec(itemType);
+			return itemType;
+		} else if (CheckForKoolKamp.exec(itemType)) {
+			itemType = CheckForKoolKamp.exec(itemType);
+			return itemType;
+		} else {
+			itemType = "Lesson";
+			return itemType;
+		}
+	}
+	
+	
+	function CheckIfIsIntitialLesson(SkaterN,ItemT){
+		var skaterNamePattern = new RegExp("^"+SkaterN);
+		var lessonPattern = /Lesson/; 
+		var cartItemCount = googlecart.getTotalQuantity();
+		var matchCount = 0;
+		if(cartItemCount <= 0){
+			return true;
+		} else {
+			for(i=0;i<cartItemCount;i++)
+			{
+				var cartItemDesc = googlecart.getItem(i).getCustomAttribute('description');
+				var alreadySkater = skaterNamePattern.test(cartItemDesc);
+				var alreadyLesson = lessonPattern.test(cartItemDesc);
+				if (alreadySkater == true && alreadyLesson == true)
+				{	 
+					matchCount = matchCount + 1;				
+				}				 
+			}
+			if (matchCount > 0)
+			{
+				//indicates that this is not an initial lesson for the skater being added
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	}
+		
+	function GetKoolKampDuration(){
+		var classTitle = $('select[name="select_class"]').val();
+		var singleKool = /1/;
+		var multiKool = /4/;
+		var depoKool = /depo/;
+		
+		var isSingleKool = singleKool.test(classTitle);
+		var isMultiKool = multiKool.test(classTitle);
+		var isDepoKool = depoKool.test(classTitle);
+		
+		if(isSingleKool){
+			return 1;
+		} else if (isMultiKool) {
+			return 4;
+		} else {
+			return 5;
+		}
+	}
+	
+	function DetermineCost(SkaterName, ItemType){
+		var cost;
+		if (ItemType == "Certificate"){
+			cost = GIFTCERTIFICATE;
+			return cost;
+		} else if (ItemType == "Pass"){
+			cost = SKATEPASS;
+			return cost;
+		} else if (ItemType == "Kool"){
+			var KoolDuration = GetKoolKampDuration();
+			if (KoolDuration == 1) {
+				cost = SINGLEKOOL;
+				return cost; 
+			} else if (KoolDuration == 4){
+				cost = MULTIKOOL;
+				return cost;
+			} else {
+				cost = KOOLDEPOS;
+				return cost;
+			}
+		} else {
+			var cutOffPassed = CheckIfCutoffPassed();
+			var initialClass = CheckIfIsIntitialLesson(SkaterName,ItemType);
+			if (initialClass == true){
+				if (cutOffPassed == true){
+					cost = SKATECLASSCOST;
+					return cost;
+				} else if (initialClass == true && cutOffPassed == false) {
+					cost = SKATECLASSCOST - EARLYDISC;
+					return cost;
+				}
+			}
+			cost = SKATECLASSCOST - MULTISKDISC;
+			return cost;
+		}
+	}
+	
+	function BuildDescription(SkName,SkAge,ShirtSize,ItemType,ItemDayTime){
+		if(SkAge == "null" && ShirtSize == "null"){
+			var descriptionForCart = SkName + ", " + ItemType + ":" + ItemDayTime;
+			return descriptionForCart;
+		}else{
+			var descriptionForCart = SkName + ", Age:" + SkAge + ", Shirt:" + ShirtSize + ", Kool Kamp:" + ItemDayTime;
+			return descriptionForCart;
+		}
+	} 
+	
+	
+	function CheckForRepeatLessonDayTime(skaterName, classDayTime){
+		var cartCount = googlecart.getTotalQuantity();
+		var skaterNamePattern = new RegExp(skaterName);
+		var classDayTimePattern = new RegExp(classDayTime);
+		for (i=0;i<cartCount;i++){
+			var testCartItem = googlecart.getItem(i);
+			var testCartItemDesc = testCartItem.getCustomAttribute('description');
+			var hasSameName = skaterNamePattern.test(testCartItemDesc);
+			var hasSameTime = classDayTimePattern.test(testCartItemDesc);
+			if( hasSameName && hasSameTime){
+				return true;
+			} 
+		}
+		return false;
+	}
+	
+	
+	$('#googlecart-add').click(function(){
+		
+		var isValid = ValidateFields();
+		if(isValid == false)
+		{
+			return false;
+		}
+		
+		var skaterNameString = CreateSkaterNameString();
+		var itemType = DetermineItemType();
+		var skaterAge = $('#select_age option:selected').val();
+		var shirtSize = $('#select_shirt_size option:selected').val();
+		var classDayTime = $('#select_day_time option:selected').val();
+		var cartCount = googlecart.getTotalQuantity();
+		if(itemType == "Lesson" && cartCount > 0){
+			var isDayTimeRepeated = CheckForRepeatLessonDayTime(skaterNameString, classDayTime);
+			if (isDayTimeRepeated == true)
+			{
+				alert(skaterNameString + " has already signed up for a lesson on " + classDayTime + ". Please select another day and time.");
+				return false;
+			}
+			
+		}
+		
+		var itemCost = DetermineCost(skaterNameString, itemType);
+		var orderItemDescription = BuildDescription(skaterNameString,skaterAge,shirtSize,itemType,classDayTime);
+		
+		$('.product-attr-description').val(orderItemDescription);
+		$('#product-price').val(itemCost);
+		$('#product-title').val($('select[name="select_class"]').val());
+		
+		//Reset the form values to default
+		//$('#skater_fname').val("");
+		//$('#skater_lname').val("");
+		document.getElementById("classes_form")
+		var selectTags = classes_form.getElementsByTagName("select");
+		for (var i = 0; i < selectTags.length; i++){
+			selectTags[i].selectedIndex = 0;
+		}
+	});		
+});
+
+
+
+function checkForSameSkaterTwoLessons(delItemTitle, delItemDesc, delItemPrice, delItemIndex){
+	var delItemDescSplit = delItemDesc.split(/,|:/);
+	var delItemSkaterNamePatt = new RegExp(delItemDescSplit[0]);
+	var delItemDescPatt = new RegExp(delItemDescSplit[1].trim());
+	var delItemSkaterName = delItemDescSplit[0];
+	var delItemType = delItemDescSplit[1].trim();
+	
+	if (delItemDescPatt.exec(delItemDesc) == "Lesson" && delItemPrice == 89 || delItemPrice == 80 )
+	{
+		var x = delItemIndex - 1;
+		while (x >= 0)
+		{
+			var compareCartItem = googlecart.getItem(x);
+			var compareCartItemDesc = compareCartItem.getCustomAttribute('description');
+			var compareCartItemDescSplit = compareCartItemDesc.split(/,|:/);
+			var compareSkaterNamePatt = new RegExp(compareCartItemDescSplit[0]);
+			var compareDescPatt = new RegExp(compareCartItemDescSplit[1].trim());
+			var compareSkaterName = compareCartItemDescSplit[0];
+			var compareOrderItemType = compareCartItemDescSplit[1].trim();
+			
+			if(delItemSkaterName == compareSkaterName && delItemType == compareOrderItemType)
+			{
+				var cuPassed = CheckIfCutoffPassed();
+				if(cuPassed == true)
+				{
+					compareCartItem.setPricePerUnit(SKATECLASSCOST);
+					break;
+				} else {
+					compareCartItem.setPricePerUnit(SKATECLASSCOST - EARLYDISC);
+					break;
+				}
+			}
+			x--;
+		}
+	}		
+}
+	
+	
+function googlecartAfterRemove(item, index){ 
+	googlecartWidget.toggleItemList();
+	
+	var cartCount = googlecart.getTotalQuantity();
+	if (cartCount > 0)
+	{
+		var deletedItemDesc = item.getCustomAttribute('description');
+		var deletedItemIndex = index;
+		var deletedItemTitle = item.getTitle();
+		var deletedItemPrice = item.getPricePerUnit();
+		checkForSameSkaterTwoLessons(deletedItemTitle, deletedItemDesc, deletedItemPrice, deletedItemIndex);
+	}
+}
+
+
+function googlecartAfterAdd(item, index){
+	googlecartWidget.refresh();
+}
+
+
+
+</script>
+
+
+<!-- #EndEditable -->
+
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<div id="main">
+
+
+<div id="mastheadcontainer" style="overflow:visible;"><!-- Begin mastheadontainer -->
+	<div id="masthead" style="overflow:visible"><!-- Begin Masthead -->
+		<div id="mastheadcontent" style="overflow:visible;">
+			<!--<div id="googlecart-widget" style="float:right; overflow:visible;"></div>-->
+			<img src="../images/UpdatedLloydCenterLogoNoWords.gif" alt="Lloyd Center Ice Logo" style="position:relative;" />
+			<h1 style="clear:right;">Lloyd Center Ice Rink</h1>
+			<p>(503) 288-6073&nbsp;|&nbsp;fax (503) 288-6940</p><br /><br /><br />
+			
+			<div class="fb-like" data-href="http://www.facebook.com/#!/LloydCenterIce" data-send="true" data-width="420" data-show-faces="false">
+			</div>
+			
+		</div>
+	</div><!-- End Masthead -->
+</div><!-- End mastheadcontainer-->
+	
+	
+<div id="bodycontainer"><!-- Begin bodycontainer -->	
+	<!--<div id="page_content" style="overflow:auto;">--><!-- Begin Page Content -->
+		<!-- Begin Sidebar -->
+		<div id="lsidebar">
+			<ul>
+				<li><a href="../default.html">Home</a></li>
+				<li><a href="default.html">Skating Lessons</a></li>
+				<li><a href="../Public/default.html">Public Sessions</a></li>
+				<li><a href="../Birthdays/default.html">Birthdays</a></li>
+				<li><a href="../calendar/default.html">Calendar</a></li>
+				<li><a href="../KoolKamp/default.html">Kool Kamp</a></li>
+				<li><a href="../group/default.html">Group Rates</a></li>
+				<li><a href="../private/default.html">Private Ice Rental</a></li>
+				<li><a href="../private/default.html">Broomball</a></li>
+				<li><a href="../freestyle/default.html">Freestyles</a></li>
+				<li><a href="../icc/default.html">Ice Crystal Classic</a></li>
+				<li><a href="../sponsorship/default.html">Sponsorship</a></li>
+				<li><a href="../contact/default.html">Contact</a></li>
+				<li><a href="../directions/default.html">Driving Directions</a></li>
+				<li><a href="http://blog.lloydcenterice.info" target="_blank">Lloyd Ice Blog</a></li>
+			</ul>
+			
+		</div>
+		<!-- End Sidebar -->
+		<!-- Begin Content -->
+		<div id="content">
+			<!-- #BeginEditable "content" -->
+			
+			<h1 style="text-align:center">Class Enrollment Dates and Schedule<br />
+			Gift Certificate Store<br />
+			Kool Kamp Registration</h1>
+			<h4 style="text-align:center;">Skating Class Certificates available now for only $89.00<br />Public Skate Gift Certificates for $10</h4>		
+		
+			<h4 style="text-align:center; color:#003399;">Registration Now Open 
+			For Semester Starting 7/29/2013<br />
+			7 Week Session, $89. On Sale until July 28th, 9 pm.</h4>
+			
+				<p style="text-align:center">Note: to sign up for more than one class, enter name and select class.  Enter any additional requested information, then click add to cart.  Repeat for additional classes.</p>
+
+				<p style="text-align:center"><a href="../calendar/default.html">Any Schedule Changes will be 
+				posted in the Calendar</a></p>
+            						
+			<form name="classes_form" action="" method="post">
+			<fieldset>
+				<legend style="font-weight:bold;">Skate Session Signup Form</legend>
+			<br />
+			<table width="100%" style="margin-left:auto; margin-right:auto">
+				<tr>
+					<td style="text-align:right; width:30%;">
+					<label>Skater's First Name<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<input id="skater_fname" name="skater_fname" type="text" />
+                	</td>
+                </tr>
+                
+                <tr>
+                	<td  style="text-align:right; width:30%;">
+                	<label>Skater's Last Name<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<input id="skater_lname" name="skater_lname" type="text" />
+            		</td>
+            	</tr>
+            	<tr>
+            		<td  style="text-align:right; width:30%;">
+            		<label>Class<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<select id="select_class" name="select_class">
+                	<optgroup>
+                	<option selected="selected">Select Class</option>
+                	</optgroup>
+                	<optgroup label="Certificates">
+                	<option class="product-attribute-course" value="Skate Class Certificate">$89 Skate Class Certificate</option>
+                	<option class="product-attribute-course" value="Public Skate Pass">$10 Public Skate Gift Certificate</option>
+                	</optgroup>
+                	<optgroup label="Kool Kamp">
+                	<option class="product-attribute-course" value="Kool Kamp 1 Wk">Kool Kamp 1 week $219</option>
+                	<option class="product-attribute-course" value="Kool Kamp Deposit">Kool Kamp deposit - 1 week $50</option>
+                	<option class="product-attribute-course" value="Kool Kamp 4 Wks">Kool Kamp 4 weeks $795</option>
+                	</optgroup>
+                	<!--
+                	<optgroup label="Holiday">
+                	<option class="product-attribute-course" style="color:red;" value="Holiday Snowbunnies 1">Holiday Snowbunnies 1</option>
+                    <option class="product-attribute-course" style="color:red;" value="Holiday Snowbunnies 2">Holiday Snowbunnies 2</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Snowbunnies 3">Holiday Snowbunnies 3</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Introductory">Holiday Introductory</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 2">Holiday Basic 2</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 3">Holiday Basic 3</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 4">Holiday Basic 4</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 5">Holiday Basic 5</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 6">Holiday Basic 6</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 7">Holiday Basic 7</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Basic 8">Holiday Basic 8</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 1">Holiday Freeskate 1</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 2">Holiday Freeskate 2</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 3">Holiday Freeskate 3</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 4">Holiday Freeskate 4</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 5">Holiday Freeskate 5</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Freeskate 6">Holiday Freeskate 6</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Adults">Holiday Adults</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Moves">Holiday Moves</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Spins">Holiday Spins</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Power">Holiday Power</option>
+					<option class="product-attribute-course" style="color:red;" value="Holiday Jumps">Holiday Jumps</option>
+					</optgroup>
+					-->
+                	<optgroup label="Skate Classes">
+                	<option class="product-attribute-course" value="Snowbunnies 1">Snowbunnies 1</option>
+                	<option class="product-attribute-course" value="Snowbunnies 2">Snowbunnies 2</option>
+                	<option class="product-attribute-course" value="Snowbunnies 3">Snowbunnies 3</option>
+                	<!--<option class="product-attribute-course" value="Summer Snowbunnies 1">Summer Show Snowbunnies 1</option>
+                	<option class="product-attribute-course" value="Summer Snowbunnies 2">Summer Show Snowbunnies 2</option>
+                	<option class="product-attribute-course" value="Summer Snowbunnies 3">Summer Show Snowbunnies 3</option>-->
+                	
+                	<option class="product-attribute-course" value="Introductory">Introductory</option>
+                	<!--<option class="product-attribute-course" value="Summer Intro">Summer Show Introductory</option>-->
+                	<option class="product-attribute-course" value="Adult 1">Adult 1</option>
+                    <option class="product-attribute-course" value="Adult 2">Adult 2</option>
+                    <option class="product-attribute-course" value="Adult 3">Adult 3</option>
+                    <option class="product-attribute-course" value="Adult 4">Adult 4</option>
+                    <option class="product-attribute-course" value="Adult FS-1">Adult FS 1+</option>
+                   <!-- <option class="product-attribute-course" value="Summer Adult">Summer Show Adult</option>
+                    <option class="product-attribute-course" value="Summer Boys">Summer Show Boys Group</option>-->
+
+                    
+                    <option class="product-attribute-course" value="Basic 2">Basic 2</option>
+                    <option class="product-attribute-course" value="Basic 3">Basic 3</option>
+                    <option class="product-attribute-course" value="Basic 4">Basic 4</option>
+                    <option class="product-attribute-course" value="Basic 5">Basic 5</option>
+                    <option class="product-attribute-course" value="Basic 6">Basic 6</option>
+                    <option class="product-attribute-course" value="Basic 7">Basic 7</option>
+                    <option class="product-attribute-course" value="Basic 8">Basic 8</option>
+                   <!-- <option class="product-attribute-course" value="Summer Basic 2">Summer Show Basic 2</option>
+                    <option class="product-attribute-course" value="Summer Basic 3">Summer Show Basic 3</option>
+                    <option class="product-attribute-course" value="Summer Basic 4">Summer Show Basic 4</option>
+                    <option class="product-attribute-course" value="Summer Basic 5">Summer Show Basic 5</option>
+                    <option class="product-attribute-course" value="Summer Basic 6">Summer Show Basic 6</option>
+                    <option class="product-attribute-course" value="Summer Basic 7">Summer Show Basic 7</option>
+                    <option class="product-attribute-course" value="Summer Basic 8">Summer Show Basic 8</option>-->
+                    
+                    <option class="product-attribute-course" value="Freeskate 1">Freeskate 1</option>
+                    <option class="product-attribute-course" value="Freeskate 2">Freeskate 2</option>
+                    <option class="product-attribute-course" value="Freeskate 3">Freeskate 3</option>
+                    <option class="product-attribute-course" value="Freeskate 4">Freeskate 4</option>
+                    <option class="product-attribute-course" value="Freeskate 5">Freeskate 5</option>
+                    <option class="product-attribute-course" value="Freeskate 6">Freeskate 6</option>
+                   <!-- <option class="product-attribute-course" value="Summer Freeskate 1">Summer Show Freeskate 1</option>
+                    <option class="product-attribute-course" value="Summer Freeskate 2">Summer Show Freeskate 2</option>
+                    <option class="product-attribute-course" value="Summer Freeskate 3">Summer Show Freeskate 3</option>
+                    <option class="product-attribute-course" value="Summer Freeskate 4">Summer Show Freeskate 4</option>
+                    <option class="product-attribute-course" value="Summer Freeskate 5">Summer Show Freeskate 5</option>
+                    <option class="product-attribute-course" value="Summer Freeskate 6">Summer Show Freeskate 6</option>-->
+
+                    
+                    
+                    <option class="product-attribute-course" value="Power">Power</option>
+                    <option class="product-attribute-course" value="Synchronized Skating">Synchronized Skating</option>
+                    <option class="product-attribute-course" value="Moves">Moves</option>
+                    
+                    <option class="product-attribute-course" value="Spins">Spins</option>
+                   <!-- <option class="product-attribute-course" value="Patch">Patch</option>-->
+                    
+                    <!--<option class="product-attribute-course" value="Dance 1">Dance 1</option>
+                    <option class="product-attribute-course" value="Off Ice">Off Ice</option>-->
+                    <option class="product-attribute-course" value="Spectrum Skaters">Spectrum Skaters</option>
+                    </optgroup>
+                	</select><br />
+                	<!--
+                	<option class="product-attribute-course" value="Int-Low-Power">Int/Low Power</option>
+                    <option class="product-attribute-course" value="Low-Power Off Ice">Low Power - Off Ice</option>
+                    <option class="product-attribute-course" value="High-Power">High Power</option>
+                    <option class="product-attribute-course" value="High-Power Off Ice">High Power - Off Ice</option>
+                    <option class="product-attribute-course" value="Posture Stretch">Posture and Stretch</option>
+                	<option class="product-attribute-course" value="Jumps">Jumps</option>
+                    <option class="product-attribute-course" value="Axel Plus">Axel</option>
+                    <option class="product-attribute-course" value="Adult Specialty">Adult Specialty</option>
+                    -->
+                	</td>
+                </tr>
+                
+                <tr class="skaterAgeSize" style="display:none;">
+            		<td  style="text-align:right; width:30%;">
+                	<label>Skater's Shirt Size<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<select id="select_shirt_size">
+                		<option class="shirt_size" value="null" selected="selected">Select Shirt Size</option>
+                		<option class="shirt_size" value="Small">Small</option>
+                		<option class="shirt_size" value="Medium">Medium</option>
+                		<option class="shirt_size" value="Large">Large</option>
+                	</select>
+            		</td>
+            	</tr>
+            	
+            	<tr class="skaterAgeSize" style="display:none;">
+            		<td  style="text-align:right; width:30%;">
+                	<label>Skater's Age<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<select id="select_age">
+                		<option class="skater_age" value="null" selected="selected">Select Skater Age</option>
+                		<option class="skater_age" value="5">5</option>
+                		<option class="skater_age" value="6">6</option>
+                		<option class="skater_age" value="7">7</option>
+                		<option class="skater_age" value="8">8</option>
+                		<option class="skater_age" value="9">9</option>
+                		<option class="skater_age" value="10">10</option>
+                		<option class="skater_age" value="11">11</option>
+                		<option class="skater_age" value="12">12</option>
+                	</select>
+            		</td>
+            	</tr>
+                
+                
+                <tr>
+                	<td  style="text-align:right; width:30%;">
+                	<label>Day &amp; Time<span style="color:red;">*</span></label>
+                	</td>
+                	<td style="width:68%;">
+                	<select id="select_day_time">
+                		<option>Choose Day &amp; Time</option>
+                	</select><br />
+                	</td>
+                </tr>
+                
+                <tr>
+                <td colspan="2">
+                	<div id="erbox">
+                		<label id="lblerrormsg" style="color:maroon; margin-bottom:14px; margin-left:26px; visibility:visible;">First Name, Last Name and Day &amp; Time are required.</label>
+                	</div>
+                </td>
+                </tr>
+                
+                <tr>
+                <td colspan="2" style="text-align:right">
+                <div class="product">
+                	<input class="product-title" id="product-title" name="sk_class" type="hidden" value="" />
+                	<input class="product-attr-description" id="product-attr-description" name="sk_sched" type="hidden" value="" />
+                	<input class="product-price" id="product-price" name="sk_price" type="hidden" value="" />
+                	<input class="sk-name" id="sk-name" name="sk-name" type="hidden" />
+                	<a class="googlecart-add" id="googlecart-add">Add to Cart</a>
+                </div>
+                </td>
+                </tr>
+            </table>
+            </fieldset>                
+            </form>
+            
+			<p><a href="../E13_lts_brochure_7_0_2013%20(1)PS.pdf">Skate School 
+			Brochure</a></p>
+			<p><a href="../Kool_Kamp_Flyer_2013Cactus2.pdf">Kool Kamp Brochure</a></p>
+			<p>&nbsp;</p>
+			<p>If you are just starting out with lessons, we recommend you sign 
+			up for one of our beginning classes, depending on your age. If you 
+			are 3-5 years old, we offer a Snowbunnies class. If you are 6-adult 
+			we offer an Introductory class. If you are an adult and would prefer 
+			the company of adults only during your lessons we offer an adult 
+			Introductory class on Monday evenings at 7:00pm.</p>
+			<h2>What to Expect….</h2>
+			<ul>
+				<li>Most students need a minimum of two 7 week sessions to pass 
+				a level </li>
+				<li>Multi-level classes take longer (Ex. Freeskate 1-2) </li>
+				<li>All students will be evaluated in the 5th week and tested in 
+				the 7th </li>
+				<li>In addition to group classes, students may need private 
+				lessons to learn essential skills </li>
+				<li>Practice, Practice, Practice!! Use your Student ID card </li>
+				<li>Come to class a little early so you have time to skate up 
+				and warm up. </li>
+			</ul>
+			<h2>Benefits</h2>
+			<ul>
+				<li>Admission to all Public Sessions<br />
+				(Skate Rental not included) </li>
+				<li>Free admission through Holiday breaks </li>
+				<li>Skate Rental is FREE during your lesson and on all public 
+				sessions on the day of your lesson </li>
+				<li>3 free admission guest passes to bring a friend skating 
+				during public session.<br />
+				(Skate Rental not included) </li>
+				<li>Report cards and Certificate of Participation upon 
+				completion of class. </li>
+				<li>Opportunities to participate in Shows and Competitions 
+				through out the year. </li>
+			</ul>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            
+			<table style="border:0px; padding:0px;">
+				<tr>
+					<td><script type="text/javascript" src="http://tribeca.vidavee.com/advance/trh/embedAsset.js?width=470.0&height=264.0&wmode=transparent&skin=v3AdvInt_oregonLive.swf&dockey=1F2F78A99065BE7E46D4AEF4A50BD22B&"></script>
+						<img src="http://www.jumpcb.com/images/images/9.gif" style="border-style:none; width:1px; height:1px;" />
+					</td>
+				</tr>
+			</table>
+
+			
+			
+			
+			
+			
+			<!-- #EndEditable -->
+		</div>
+		<div id="rsidebar" style="left: 2px; top: 4px; height: 406px;" align="center">
+			
+				<div id="googlecart-widget" style="float:right; overflow:visible;"></div>
+
+			 
+			<!--
+			<div class="rbox" align="center" style="padding-left:auto; padding-right:auto; overflow:visible;">
+				
+				<h1>"Like" us on Facebook!</h1>
+			
+				<div class="fb-like" data-href="http://www.facebook.com/#!/LloydCenterIce" data-send="true" data-width="400" data-show-faces="false">
+				</div>
+			</div>
+			-->
+			<!--
+			<div class="rbox" align="center">
+				<h1><a href="Public/default.html">Public Sessions</a></h1>
+				<p>Check out our new rental skates!</p>
+			</div>
+			-->
+
+		</div><!-- End Content -->
+	</div><!-- End bodycontainer -->
+	
+	
+	<div id="footercontainer">
+		<div id="footer"><!-- Begin Footer -->
+			<p><a href="http://www.rinkmanagement.com/">
+			<img alt="Rink Management Services Corporation" height="59" src="../images/RMS.JPG" width="213" /></a></p>
+			<p><a href="../default.html">Home</a> | 
+			<a href="../about/default.html">About</a> 
+			| <a href="../calendar/default.html">Calendar</a> |
+			<a href="../contact/default.html">Contact</a>&nbsp; |
+			<a href="../employment/default.html">Employment</a> |
+			<a href="../faq/default.html">FAQ</a> |
+			<a href="../information_links/default.html">Information Links</a><br />
+			<a href="../donations/default.html">Donation Requests</a> | 
+			<a href="../products/default.html">
+			Products</a> | <a href="../promotions/default.html">Promotions</a> |
+			<a href="../site_map/default.html">Site Map</a><br />
+			Copyright © 2005-2010 Lloyd Center Ice Rink. All Rights Reserved.</p>
+		</div><!-- End Footer -->
+	</div><!-- End footercontainer -->
+</div><!-- End main -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-555618-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script  id='googlecart-script' type='text/javascript' src='https://checkout.google.com/seller/gsc/v2_2/cart.js?mid=831166085667863' integration='jscart-wizard' post-cart-to-sandbox='false' currency='USD' productWeightUnits='LB'></script>
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

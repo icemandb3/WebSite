@@ -1,0 +1,11 @@
+AuthUserFile /export/home/donbaldwin.org/.htpasswd
+
+AuthName Private
+
+AuthType Basic
+
+
+##Begin Virtadmin section
+require user  icemandb3 kbaldwin1970
+
+##End Virtadmin section

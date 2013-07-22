@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Untitled 1</title>
+<script type="text/javascript">
+
+function getTimes(responseText){
+	var timeDiv = document.getElementById("times");
+	timeDiv.innerHTML = responseText;
+}
+
+
+function displayLuck(luck){
+	var timeDiv = document.getElementById("times");
+	timeDiv.innerHTML = luck;
+}
+
+
+
+window.onload = function() {
+	/*var url = "http://lloydcenterice.com/freestyle.json";*/
+	var url = "http://wickedlysmart.com/ifeelluckytoday";
+	var request = new XMLHttpRequest();
+	
+	request.onload = function() {
+		if (request.status == 200) {
+			displayLuck(request.responseText);
+			/*getTimes(request.responseText);*/
+		}
+	};
+	request.open("GET", url);
+	request.send(null);
+}
+
+
+
+</script>
+</head>
+
+<body>
+Stuff<br />
+<div id="times">
+
+</div>
+
+</body>
+
+</html>

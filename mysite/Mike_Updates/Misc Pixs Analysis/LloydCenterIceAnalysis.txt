@@ -1,0 +1,18 @@
+Important Elements Visitor
+-Phone and Contact Info
+-Public Sessions - especially for the day.
+-Freestyle Sessions
+-Skate Lessons Schedule - The day and the week
+-Skate Lessons Online Sign-up
+-Different
+
+Style/Look
+-Overall
+-Header
+-- looks more cohesive if background color the same as the graphic
+-- logo more distinct
+-Footer - looks more cohesive if background color the same as the graphic
+
+Mobile Usability
+-Could use more screen
+-Links too small at first glance, need to resize which then requires user to scroll sideways

@@ -1,0 +1,470 @@
+﻿body 
+{
+    padding:0px;
+    margin:20px 0px 0px 0px;
+    color:#111;
+    font-family:Verdana;
+    font-size:12px;
+    background: url(../images/Body.png) repeat;
+    background-color:#000;
+
+}
+
+#bodyWrapper
+{
+    width:1020px;
+    margin:0px auto;
+    background-color:#fff;
+
+-moz-box-shadow: 0 0 30px 5px #999;
+-webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+   
+}
+
+#Wrapper
+{
+    width:1000px;
+    margin:0px auto;
+    padding:10px 0px 10px 0px;
+}
+
+#Header
+{
+    height:150px;
+    background: url(../images/Header.png) repeat-x;
+    font-family:Georgia;
+    color:#FDFDFD;
+    text-align:center;
+    
+}
+
+.bigTitle
+{
+    padding:10px 0px 5px 20px;
+    font-size:32px;
+}
+
+.smallTitle
+{
+    font-size: 18px;
+    padding:0px 0px 5px 0px;
+}
+#welcomeTitleWrapper
+{
+    height:65px;
+    width:1000px;
+    background: url(../images/pageTitle.png) repeat-x;
+    
+}
+
+.welcomeTitle
+{
+    color:#fff;
+    font-family:Century Gothic;
+    font-size:16px;
+    padding:10px 0px 0px 0px;
+    text-align:center;
+}
+#contentWrapper
+{
+   width:1000px; 
+   background: url(../images/Navigation.png) repeat-x;
+   background-color:#005796;
+   margin:0px 0px 0px 0px;
+   
+}
+
+#Navigation
+{
+   Float:left;
+   width:202px;
+   padding:15px 5px 5px 10px;   
+}
+
+#Navigation ul
+{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+
+#Navigation li
+{
+    width:175px;
+  _width:165px;
+    background-color:#333;
+    border:1px solid #000;
+    padding:10px;
+    margin:0px;
+    color:#fff;
+    font-weight:bold;
+    font-size:13px;
+       
+}
+#Navigation li a
+{
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+ 
+}
+
+#Navigation li:hover
+{
+     width:175px;
+  _width:165px;
+    background-color:#0094FF;
+    border:1px solid #333;
+    padding:10px;
+    margin:0px;
+    color:#fff;
+    font-weight:bold;
+    font-size:13px;
+       
+      
+}
+
+#Navigation .Dates ul
+{
+    border:1px solid #333;
+}
+
+#Navigation .Dates li
+{
+    background-color:#fff;
+    border: none;
+    color:#000;
+    font-size:10px;
+    padding:5px 10px 5px 10px;
+    font-weight:normal;
+}
+
+#Navigation .Dates li a
+{
+     color:#D30000;
+    font-size:10px;
+    font-weight:normal;
+    text-decoration:underline;
+}
+
+.pageTitle
+{
+   padding:5px 20px 10px 0px;
+   font-size:26px;
+   color:#FDFDFD;
+   font-weight:bold;
+   text-align:right;
+font-family: Century Gothic, sans-serif;
+    
+}
+
+#Content 
+{
+    float:right;
+    width:730px;
+    min-height:257px;
+    background-color:#FDFDFD;
+    margin:15px 10px 10px 0px;
+    padding:20px;
+}
+
+#Content a
+{
+    color:#0094FF;
+    
+}
+
+#Content ul li
+{
+    padding:5px;
+}
+
+#Content ol li
+{
+    padding:5px 0px 0px 5px;
+}
+
+
+#Content .claimStyle
+{
+	margin-top:5px;
+	margin-bottom:12px;
+	background: url('../images/formBG.jpg') repeat-x;
+	background-color: #f4f1f1;
+	width:710px;
+}
+
+#Content .claimLegend
+{
+    padding: 5px;
+    background-color:#005796;
+    color:#fff;
+    font-size:13px;
+}
+
+#Content .noStyle
+{
+    padding:0px;
+    margin:0px;
+    background:none;
+    border:none;
+    text-decoration:underline;
+}
+
+#Content .error
+{
+    font-size:small;
+    color:Red;
+}
+
+#Content .claimTable
+{
+    margin:0px 0px 0px 50px;
+    
+}
+
+#Content .claimTable tr td
+{
+    padding:0px 5px 3px 5px;
+}
+
+#Content .claimDataTable
+{
+    margin:0px 0px 0px 0px;
+    
+}
+
+#Content .claimDataTable tr td
+{
+    padding:0px 5px 10px 5px;
+}
+
+#Content .checkTable
+{
+    margin:0px 0px 0px 0px;
+    
+}
+
+#Content .checkTable tr td
+{
+    padding:0px 5px 3px 5px;
+}
+
+#Content .gridview
+{
+    
+    color:Black;
+    margin:15px 0px 15px 0px;
+    padding:2px;
+}
+
+#Content .gridview td
+{
+    padding:5px 5px 5px 5px;
+    color:#000 !Important;
+}
+#Content .gridview th
+{
+    padding:5px 0px 5px 5px;
+    color:#fff;
+    border-color:#000;
+}
+
+#Content .gvHeader td
+{
+    color:#fff !Important;
+    font-weight:bold;
+    border-color:#000;
+}
+
+.Calendar tr td
+{
+    padding:0px !Important;
+    margin:0px !Important;
+    background-color:#fff;
+}
+div.ajax__calendar_body
+{
+    
+
+}
+div.ajax__calendar_container
+{
+  
+     background-color:#fff;
+                          
+}
+
+#rightsTable
+{
+    width:730px;
+    border-bottom:1px solid #000;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    border-top:1px solid #000;
+    margin:0px auto;
+}
+
+#rightsTable .tableHeader
+{
+    background-color:#adadad;
+     padding:5px 5px 10px 10px;
+     text-align:center;
+     font-weight:bold;
+    
+    
+}
+
+
+#rightsTable .tdLeft
+{
+     background-color:#e6e6e6;
+     text-align:center;
+     font-weight:bold;
+     width:150px;
+         padding:10px 5px 15px 10px;
+     
+     
+}
+#rightsTable .tdMiddle
+{
+
+    padding:10px 5px 15px 10px;
+       text-align:left;
+ 
+}
+
+#rightsTable .tdRight
+{
+
+    padding:10px 5px 15px 10px;
+       text-align:left;
+       font-weight:normal;
+        background-color:#fff;
+       
+}
+
+
+#Documents a
+{
+    text-decoration:underline;
+    color:#000;
+}
+
+#FAQ
+{
+     font-weight:normal !important
+}
+
+#FAQ .faqHeader
+{
+    font-weight:bold;
+    color:#738393;
+    font-size:15px;
+    padding-bottom:5px;
+    text-align:center;
+}
+
+#FAQ ol li
+{
+    padding:5px;
+}
+
+#FAQ .noListStyle li
+{
+    font-weight:normal !important;
+}
+
+#FAQ .Question
+{
+    font-weight:bold;
+    text-decoration:none;
+    text-align:left;
+}
+
+#FAQ .Answer p
+{
+    font-weight:normal;
+}
+
+
+
+#FAQ .Answer 
+{
+    font-weight:bold;
+}
+
+#FAQ .Answer span
+{
+    font-weight:normal !important; 
+}
+
+
+#masthead {
+	text-align: right;
+	width: 960px;
+	margin: 0 auto;
+	/*overflow: auto;*/
+}
+#mastheadcontent{
+	width:956px;
+	height:122px;
+	margin:0 auto;
+	/*background-image:url('../images/bk-masthead.jpg');*/
+	/*background-repeat:no-repeat;*/
+	background-color:#dcb;
+}
+#mastheadcontent h1{
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	color:#0066CC;
+	/*color:#CCFFFF;*/
+	font-size:x-large;
+	font-weight:bold;
+	margin-top:2px;
+	margin-bottom:2px;
+	margin-right:10px;
+	padding:0px;
+}
+#mastheadcontent img {
+	float: left;
+	margin-left:20px;
+}
+#mastheadcontent p {
+	color:#0066CC;
+	/*color:#CCFFFF;*/
+	text-align: right;
+	margin: 0;
+	margin-top: 2px;
+	margin-right: 10px;
+	padding: 0;
+}
+/* --- End Styles for Masthead or Header --- */
+
+
+
+
+
+#Footer
+{
+    background: url(../images/Footer.png) repeat-x;
+    background-color:#000;
+    color:#fff;
+    font-family:Century Gothic;
+    font-size:14px;
+    padding:10px 0px 10px 0px;
+    text-align:center;
+}
+    
+#Footer a
+{
+     color:#fff;
+     text-decoration:none;
+}
+
+#Footer a:hover
+{
+    text-decoration:underline;
+}
+

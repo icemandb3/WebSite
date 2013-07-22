@@ -1,0 +1,6 @@
+container width: 630px;
+masthead width: 630px;
+page_content > sidebar width: 150px;
+page_content > content: width: 446px;
+footer width: 630px; 
+

@@ -1,0 +1,49 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#headercontainer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#masthead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#bodycontainer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#lsidebar {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#rsidebar {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#content {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#footercontainer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.float_right {
+	float:right;
+}

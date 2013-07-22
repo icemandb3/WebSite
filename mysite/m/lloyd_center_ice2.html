@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Lloyd Center Ice Rink</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	
+	<script type="text/javascript">
+		function initClassList()
+		{
+					
+			
+			$.get('SkateLessons.xml',function(theList){
+				$('#content').empty();
+				$(theList).find('Class').each(function(){
+					var $skateClass = $(this);
+					var html = '<div class="data"><table style="width:50%; margin-right:auto; margin-left:auto; border:1px solid #ccc;">';
+					html += '<tr><td style="background-color:#ccc; font-weight:bold;">' + $skateClass.attr('name') + '</td></tr>';
+					var $cloptions = $skateClass.find('ClassTimeOptions');
+					$cloptions.find('Option').each(function()
+					{
+						html += '<tr><td>' + $(this).text() + '</td></tr>';
+					});
+					html += '</table></div>';
+					$('#content').append(html);
+				});
+			});
+		
+			return false;
+		}
+		
+		function init()
+		{
+			$("#ClassTimes").bind("pageshow", function(event, ui) {
+				initClassList();
+			});
+		}
+	
+		$(document).ready(function() {
+			init();
+		});
+	</script>
+	
+	<style type="text/css">
+	h1
+	{
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	}
+	h3
+	{
+	font-size:12px;
+	font-weight:bold;
+	margin-top:0px;
+	padding-top:0px;
+	}
+	</style>
+	
+	</head> 
+<body> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-555618-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Start of first page -->
+<div data-role="page" id="Home">
+	
+	<div data-role="header" data-theme="b" id="header">
+		<div style="padding-bottom:0px; margin-bottom:0px;"><h1>Lloyd Center Ice Rink</h1></div>
+			<h3>Portland, OR.</h3>
+	</div><!-- /header -->
+	
+	<div data-role="content">	
+		<div style="width:100%; margin:0px auto;text-align:center;">
+		<img src="../images/logo-noWords.gif" alt="Lloyd Center Ice Rink" />
+		</div>
+		
+		<p style="text-align:center;">We are conveniently
+		 located on the first floor of the Lloyd Center Mall, across from Macy's.</p>		
+		<p style="text-align:center;"><a href="#Home">Home</a> | <a href="#OpenSkate">Open Skate</a> | <a href="#Directions">Directions</a> | <a href="#Contact">Contact Us</a> | <a href="#ClassTimes">Class Times</a></p>	
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="b" style="height:30px; width:100%;">
+		<div class="ui-grid-b" style="font-size:small; width:100%;">
+			<div class="ui-block-a" style="width:49%;margin-left:4px;">Phone: (503) 288-6073</div>
+			<div class="ui-block-b" style="width:49%;text-align:right;margin-right:4px;">Lloyd Center Ice Rink &copy; 2012</div>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="OpenSkate">
+
+	<div data-role="header" data-theme="b" id="header">
+		<div style="padding-bottom:0px; margin-bottom:0px;"><h1>Lloyd Center Ice Rink</h1></div>
+			<h3>Portland, OR.</h3>
+	</div><!-- /header -->
+
+
+	<div data-role="content">
+		<div style="width:100%; margin:0px auto;text-align:center;">
+		<img src="../images/logo-noWords.gif" alt="Lloyd Center Ice Rink" />
+		</div>	
+		<h3 style="text-align:center; font-size:14px;">Public Skate Schedule and Pricing</h3>
+		
+			<div data-role="collapsible-set">
+
+			<div data-role="collapsible">
+				<h3>Pricing</h3>	
+   			<ul>
+   				<li>Admission $6.50</li>
+   				<li>Skate Rental $3.50</li>
+   				<li>Friday Night - Rock n' Skate $8 includes Admission and Skate Rental (7:30 pm to close)</li>
+   				<li>Saturday Night- $8 Saturday Night includes Admission and Skate Rental (7:30 pm to close)</li>
+   				<li>All Times and Prices are subject to change without notice.</li>
+   			</ul>			
+   			</div>
+			
+			
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Monday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>10:00 am</td>
+   					<td>5:00 pm</td>
+   					<td>7:30 pm</td>
+   					<td>9:30 pm</td>
+   				</tr>
+   				</table>
+			</div>
+	
+			<div data-role="collapsible">
+				<h3>Tuesday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>10:00 am</td>
+   					<td>5:00 pm</td>
+   					<td>7:30 pm</td>
+   					<td>9:30 pm</td>
+   				</tr>
+   				</table>
+			</div>
+			
+			
+			<div data-role="collapsible">
+				<h3>Wednesday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>10:00 am</td>
+   					<td>5:00 pm</td>
+   					<td>7:30 pm</td>
+   					<td>9:30 pm</td>
+   				</tr>
+   				</table>
+			</div>
+			
+			<div data-role="collapsible">
+				<h3>Thursday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>10:00 am</td>
+   					<td>5:00 pm</td>
+   					<td>7:30 pm</td>
+   					<td>9:30 pm</td>
+   				</tr>
+   				</table>
+			</div>
+			
+			<div data-role="collapsible">
+				<h3>Friday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>10:00 am</td>
+   					<td>10:00 pm</td>
+   					<td>All Day!</td>
+   					<td>All Day!</td>
+   				</tr>
+   				</table>
+			</div>
+			
+			<div data-role="collapsible">
+				<h3>Saturday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>12:00 pm</td>
+   					<td>10:00 pm</td>
+   					<td>All Day!</td>
+   					<td>All Day!</td>
+   				</tr>
+   				</table>
+			</div>
+			
+			<div data-role="collapsible">
+				<h3>Sunday</h3>
+				<table style="width:100%;border:2px solid #CCC;">
+   				<tr style="border-bottom:2px solid black;">
+   					<th style="text-align:left;background-color:#B0C4DE;">Start</th>
+   					<th style="text-align:left;background-color:#B0C4DE;">End</th>
+   					<th style="text-align:left;background-color:#778899;">Start</th>
+   					<th style="text-align:left;background-color:#778899;">End</th>
+   				</tr>
+   				<tr>
+   					<td>12:15 pm</td>
+   					<td>6:00 pm</td>
+   					<td>All Day!</td>
+   					<td>All Day!</td>
+   				</tr>
+   				</table>
+			</div>
+	
+			</div>
+	
+   				
+   					
+		<p style="text-align:center"><a href="#Home">Home</a> | <a href="#OpenSkate">Open Skate</a> | <a href="#Directions">Directions</a> | <a href="#Contact">Contact Us</a> | <a href="#ClassTimes">Class Times</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="b" style="height:30px; width:100%;">
+		
+		<div class="ui-grid-b" style="font-size:small; width:100%;">
+			<div class="ui-block-a" style="width:49%;margin-left:4px;">Phone: (503) 288-6073</div>
+			<div class="ui-block-b" style="width:49%;text-align:right;margin-right:4px;">Lloyd Center Ice Rink @ 2012</div>
+		</div>	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Contact page -->
+<div data-role="page" id="Contact">
+
+	<div data-role="header" data-theme="b" id="header">
+		<div style="padding-bottom:0px; margin-bottom:0px;"><h1>Lloyd Center Ice Rink</h1></div>
+			<h3>Portland, OR.</h3>
+	</div><!-- /header -->
+
+
+	<div data-role="content">	
+		<div style="width:100%; margin:0px auto;text-align:center;">
+		<img src="../images/logo-noWords.gif" alt="Lloyd Center Ice Rink" />
+		</div>
+		<h3 style="text-align:center; font-size:14px;">Contact Us</h3>
+			<p><b>Phone:</b> (503) 288-6073</p>
+			<p><b>Address:</b> Lloyd Center Ice Rink, 953 Lloyd Ctr. Portland, OR 97232</p>
+			<p><b>Email:</b> don@lloydcenterice.com</p>
+			
+		<p style="text-align:center"><a href="#Home">Home</a> | <a href="#OpenSkate">Open Skate</a> | <a href="#Directions">Directions</a> | <a href="#Contact">Contact Us</a> | <a href="#ClassTimes">Class Times</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="b" style="height:30px; width:100%;">
+		
+		<div class="ui-grid-b" style="font-size:small; width:100%;">
+			<div class="ui-block-a" style="width:49%;margin-left:4px;">Phone: (503) 288-6073</div>
+			<div class="ui-block-b" style="width:49%;text-align:right;margin-right:4px;">Lloyd Center Ice Rink @ 2012</div>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of fourth page -->
+<div data-role="page" id="Directions">
+
+	<div data-role="header" data-theme="b" id="header">
+		<div style="padding-bottom:0px; margin-bottom:0px;"><h1>Lloyd Center Ice Rink</h1></div>
+			<h3>Portland, OR.</h3>
+	</div><!-- /header -->
+
+
+	<div data-role="content">
+	
+		<div style="width:100%; margin:0px auto;text-align:center;">
+		<img src="../images/logo-noWords.gif" alt="Lloyd Center Ice Rink" />
+		</div>
+		<h3 style="text-align:center; font-size:14px;">Directions</h3>
+				
+	<div data-role="collapsible-set">
+	
+			<div data-role="collapsible" data-inset="false">
+			<h3 style="text-align:center">From I-5 North</h3>
+			<p>
+ Take the Rose Quarter exit, stay in the left two lanes, and pass through the first light heading towards Weidler street. 
+ Turn left onto 
+ N Weidler St. Turn right at NE Martin Luther King Blvd. Turn left 
+ onto NE Multnomah St. Just before the Lloyd Center Cinema building 
+ turn left at the light into Lloyd Center Mall (you will be paralleling 
+ Sears and Marshalls). At the north end of Marshalls you will turn 
+ left followed by a quick right onto the ramp leading to the underground 
+ parking. When the ramp splits take the right (uphill) split. At the 
+ top of the ramp turn left and park in the small parking area. The 
+ bank of glass entrance doors are at the bottom of a ½ flight of stairs.</p></div>
+
+<div data-role="collapsible" data-inset="false">
+<h3 style="text-align:center">From I-84 West</h3>
+<p>
+ Take the Lloyd Center exit. At the top of the exit ramp bear right 
+ onto NE 13th Ave. Turn right onto NE Multnomah St. Just before the 
+ Lloyd Center Cinema building turn left at the traffic light into 
+ Lloyd Center Mall (you will be paralleling Sears and Marshalls). At 
+ the north end of Marshalls you will turn left followed by a quick 
+ right onto the ramp leading to the underground parking. When the 
+ ramp splits take the right (uphill) split. At the top of the ramp 
+ turn left and park in the small parking area. The bank of glass 
+ entrance doors are at the bottom of a ½ flight of stairs.</p></div>
+
+<div data-role="collapsible" data-inset="false">
+<h3 style="text-align:center">From I-5 South</h3>
+<p>
+ Take the Rose Quarter exit. Turn right onto NE Weidler St. Turn 
+ right at NE Martin Luther King Blvd. Turn left onto NE Multnomah 
+ St. Just before the Lloyd Center Cinema building turn left at the 
+ light into Lloyd Center Mall (you will be paralleling Sears and 
+ Marshalls). At the north end of Marshalls you will turn left 
+ followed by a quick right onto the ramp leading to the underground 
+ parking. When the ramp splits take the right (uphill) split. At the 
+ top of the ramp turn left and park in the small parking area. The 
+ bank of glass entrance doors are at the bottom of a ½ flight of stairs.</p></div>
+
+<div data-role="collapsible" data-inset="false">
+<h3 style="text-align:center">Large van or bus parking directions</h3>
+<p>
+ At the north end of Marshalls do not take the quick right turn into 
+ the underground parking lot. Instead, turn left at the corner of 
+ Marshalls. Continue straight across the parking lot to the sheltered 
+ stairway located at the west end of the parking area. Park near the 
+ shelter. To enter the mall, take the stairs down to the 1A parking 
+ level. Walk across the small parking area toward the bank of glass 
+ entrance doors are at the bottom of a ½ flight of stairs.</p></div>
+ </div>
+			
+		<p style="text-align:center"><a href="#Home">Home</a> | <a href="#OpenSkate">Open Skate</a> | <a href="#Directions">Directions</a> | <a href="#Contact">Contact Us</a> | <a href="#ClassTimes">Class Times</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="b" style="height:30px; width:100%;">
+		<div class="ui-grid-b" style="font-size:small; width:100%;">
+			<div class="ui-block-a" style="width:49%;margin-left:4px;">Phone: (503) 288-6073</div>
+			<div class="ui-block-b" style="width:49%;text-align:right;margin-right:4px;">Lloyd Center Ice Rink @ 2012</div>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of fifth page -->
+<div data-role="page" id="ClassTimes">
+
+	<div data-role="header" data-theme="b" id="header">
+		<div style="padding-bottom:0px; margin-bottom:0px;"><h1>Lloyd Center Ice Rink</h1></div>
+			<h3>Portland, OR.</h3>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div style="width:100%; margin:0px auto;text-align:center;">
+		<img src="../images/logo-noWords.gif" alt="Lloyd Center Ice Rink" />
+		</div>
+		<h3 style="text-align:center; font-size:14px;">Class Times</h3>		 
+		
+		<div id="content">
+		
+		</div>
+			
+					
+		<p style="text-align:center"><a href="#Home">Home</a> | <a href="#OpenSkate">Open Skate</a> | <a href="#Directions">Directions</a> | <a href="#Contact">Contact Us</a> | <a href="#ClassTimes">Class Times</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="b" style="height:30px; width:100%;">
+		<div class="ui-grid-b" style="font-size:small; width:100%;">
+			<div class="ui-block-a" style="width:49%;margin-left:4px;">Phone: (503) 288-6073</div>
+			<div class="ui-block-b" style="width:49%;text-align:right;margin-right:4px;">Lloyd Center Ice Rink @ 2012</div>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

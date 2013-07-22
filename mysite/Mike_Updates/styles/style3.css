@@ -1,0 +1,378 @@
+﻿@import url('../My%20Web%20Sites/lloydicerink/public_html/styles/layout.css');
+body {
+	font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;
+	font-size:small;
+	color: #000;
+	background-color: #fff;
+	padding:0px 0px 0px 0px;
+	margin:0px auto;
+}
+#main{
+	width:100%;
+	margin:0px auto;
+	padding:0px auto;
+	overflow:auto;
+	/*border:1px solid red;*/
+}
+
+
+/* --- Styles for Masthead or Header --- */
+#mastheadcontainer {
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	padding:6px 0px 0px 0px;
+	background-color: #006699;
+	/*border-bottom:10px solid #0066CC;*/
+	/*border-bottom:10px #fff solid;*/
+	/*margin-bottom:20px;*/
+}
+#masthead {
+	text-align: left;
+	width: 1080px;
+	margin: 0px auto;
+	padding: 0px auto;
+	/*overflow: auto;*/
+}
+#mastheadcontent{
+	width:100%;
+	height:50px;
+	margin:0px auto;
+	padding:0px auto;
+	/*background-image:url('../images/bk-masthead.jpg');*/
+	/*background-repeat:no-repeat;*/
+	background-color:#006699;
+	/*border:1px solid orange;*/
+}
+.headholder{
+	float:left;
+	width:50%;
+	vertical-align:top;
+}
+
+#mastheadcontent h1{
+	width:100%;
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	color:#ffffff;
+	/*color:#CCFFFF;*/
+	font-size:xx-large;
+	font-weight:bold;
+	margin-top:0px;
+	margin-bottom:2px;
+	margin-right:10px;
+	padding:0px;
+	/*border:1px solid teal;*/
+}
+#mastheadcontent img {
+	float: left;
+	margin-left:20px;
+}
+.contactholder{
+	float:left;
+	width:40%;
+	vertical-align:top;
+	margin-left:80px;
+	/*border:1px solid red;*/
+}
+#mastheadcontent p {
+	color:#ffffff;
+	/*color:#CCFFFF;*/
+	text-align: right;
+	margin-top: 0px;
+	margin-right: 0px;
+	padding: 0px;
+}
+
+#navholder{
+	background-image:url('../images/nav_bg2.jpg');
+	background-repeat:repeat-x;
+	width:100%;
+	height:57px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+.fb-like {
+	position:absolute;
+	z-index:300;
+	/*right:-10px;*/
+	border:1px solid maroon;
+	margin-left:12px;
+}
+/* --- End Styles for Masthead or Header --- */
+
+
+/* --- Container for 3 Columns --- */
+#bodycontainer{
+	width:1090px;
+	margin:0px auto;
+	/*padding:0px auto;*/
+	overflow:hidden;
+	/*background-color:#cdf;*/
+	background-color: #fff;
+	overflow:hidden;
+	border:1px solid lime;
+}
+
+
+
+/* --- Styles for Left Column of Body Container --- */
+#lsidebar {
+	float: left;
+	width: 130px;
+	overflow:visible;
+	background-color: #fff;
+	/*background-color: #cdf;*/
+	top:4px;
+	font-size:medium;
+	/*border:1px solid orange;*/
+}
+
+
+
+#lsidebar ul {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#lsidebar li {
+	/*display: block;*/
+	/*border: 0px 0px 1px 0px solid #ffffff;*/
+}
+#lsidebar a {
+	/*font-weight: bold;*/
+	text-decoration: none;
+	color: #04b;
+	display: block;
+	padding: 4px;
+	/*border-bottom: 1px solid #f9f9f9;*/
+}
+#lsidebar a:hover {
+	text-decoration: none;
+	color: #04b;
+	/*border-bottom: 1px solid #f9f9f9;*/
+	background-color: #f9f9f9;
+}
+.lsidebar-adv-box{
+	width:154px;
+	border:1px solid black;
+	overflow:visible;	
+}
+
+#logoholder{
+	width:130px;
+	/*border:6px solid #006699;*/
+	padding: 0px auto;
+	text-align:center;
+	margin-left:120px;
+	height:300px;
+	/*border: 2px solid #006699;*/
+	/*background-color:gray;*/
+	/*opacity:0.5;*/
+	float:left;
+	position:absolute;
+	z-index:300;
+}
+
+#navlist{
+	margin-top:18px;
+	float:left;
+	margin-left:230px;
+	/*border:1px solid red;*/
+}
+
+#navlist li
+{
+	display:inline;
+	list-style-type:none;
+	padding-right:8px;
+	color:#fff;
+}
+
+#navlist a
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+#navlist a:hover
+{
+	color:#006699;
+}
+
+
+
+/* --- Styles for Center Column of Body Container --- */
+#content {
+	float: left;
+	width: 480px;
+	min-height:800px;
+	padding: 0px 4px 0px 4px;
+	margin:0px;
+	/*margin-left:30px;*/
+	background-color: #ffffff;
+	overflow:visible;
+	border:1px solid red;
+}
+
+/*IE6 fix*/
+#html #content
+{
+	height:800px;
+}
+
+#content img {
+	display: block;
+}
+#content h1{
+	font-family:"Trebuchet MS";
+	font-size:x-large;
+	font-weight: bold;
+	color:#808080;
+	text-align:left;
+	margin-top:10px;
+	margin-bottom:0px;
+}
+#content h2{
+	font-family:"Trebuchet MS";
+	font-size:large;
+	font-weight:normal;
+	color:#808080;
+	text-align:left;	
+}
+#content h3{
+	font-family:"Trebuchet MS";
+	font-size:medium;
+	font-weight:normal;
+	color:#808080;
+	text-align:left;	
+}
+#content p{
+	text-align:left;
+}
+#content iframe{
+	margin:0 auto;
+}
+#content table{
+	margin:0px auto;
+}
+#content img{
+	margin:0px auto;
+}
+#content form{
+	margin-left:0px;
+}
+.fieldLabels{
+	text-align:right;
+	width:30%;
+}
+
+
+/* --- Styles for Right Column of Body Container --- */
+#rsidebar {
+	float: left;
+	width: 420px;
+	/*background-color: #cdf;*/
+	background-color: #fff;
+	margin-top:0px;
+	margin-left:20px;
+	margin-right:0;
+	overflow:visible;
+	border:1px solid teal;
+}
+.rbox{
+	width:400px;
+	border:4px solid;
+	border-color:#006699;
+	background-color:#dcb;
+	margin-bottom:10px;
+	margin-left:0px auto;
+	margin-right:0px auto;
+	overflow:visible;
+}
+.rbox h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:medium;
+	font-weight:bold;
+	color:#04b;
+}
+
+
+.rbox-adv{
+	width:270px;
+	overflow:visible;
+	border-top:8px solid #0066CC;
+	border-bottom:4px solid #0066CC;
+	margin-top:24px;
+	margin-left:0px auto;
+	margin-right:0px auto;
+}
+.rbox-adv h3{
+	width:100%;
+	color:#04b;
+	font-weight:bold;
+	background-color:#dcb;
+	line-height:28px;
+	margin-top:0px;
+}
+.rbox-adv h4{
+	color:#808080;
+	font-weight:bold;
+}
+.rbox-adv p{
+	text-align:center;
+}
+img.display-adv{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+
+/* --- Styles for Footer --- */
+#footercontainer{
+	width:100%;
+	margin:0 auto;
+	overflow:auto;
+	border-top:10px solid #006699;
+}
+#footer {
+	/*clear: both;*/
+	width: 100%;
+	background-color: #006699;
+	padding: 0;
+	overflow: auto;	
+}
+#footer p {
+	font-size: 0.9em;
+	text-align: center;
+	margin: 0px;
+	padding: 2px;
+}
+#footer a {
+	color: #fff;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+/* --- General Styles --- */
+a {
+	color: #04b;
+	text-decoration: underline;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<script type="text/javascript">
+var myFormArray = new Array();
+
+function getFormValues()
+{
+	var xform = document.getElementById("theForm");
+	for(var i=0;i<xform.length;i++)
+	{
+		myFormArray.unshift(xform.elements[i].value);	
+	}
+	
+	var firstField = myFormArray[0].value;
+	var me = myFormArray[0].value;
+	alert(myFormArray.length + ", " + xform.elements[0].value);	
+}
+</script>
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Form and Array JavaScript Functionality</title>
+</head>
+
+<body>
+
+<form id="theForm">
+	First name: <input type="text" id="fname" name="fname"  /><br />
+	Last name: <input type="text" id="lname" name="lname"  />
+	<!--<button type="submit" onclick="getFormValues()">Submit</button>-->
+</form>
+<br />
+<div id="myAddClick" onclick="getFormValues()">Click here to check a specific array element</div>
+
+</body>
+
+</html>

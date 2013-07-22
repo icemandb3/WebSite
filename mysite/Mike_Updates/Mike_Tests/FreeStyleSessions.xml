@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<freestylesessions>
+	<dailysession day="Monday">
+		
+		<time>6:30am</time>
+		<time>7:15am</time>
+		<time>8:15am</time>
+		<time>9:00am</time>
+		<time>5:15pm</time>
+		
+	</dailysession>
+	<dailysession day="Tuesday">
+		
+		<time>5:45am</time>
+		<time>6:30am</time>
+		<time>7:15am</time>
+		<time>8:15am</time>
+		<time>9:00am</time>
+		<time>5:15pm</time>
+		<time>6:00pm</time>
+		<time>6:45pm</time>
+		
+	</dailysession>
+	<dailysession day="Wednesday">
+		
+		<time>5:45am</time>
+		<time>6:30am</time>
+		<time>7:15am</time>
+		<time>8:15am</time>
+		<time>9:00am</time>
+		<time>5:15pm</time>
+		
+	</dailysession>
+	<dailysession day="Thursday">
+		
+		<time>5:45am</time>
+		<time>6:30am</time>
+		<time>7:15am</time>
+		<time>8:15am</time>
+		<time>9:00am</time>
+		<time>5:15pm</time>
+		<time>6:00pm</time>
+		<time>6:45pm</time>
+		
+	</dailysession>
+	<dailysession day="Friday">
+		
+		<time>6:30am</time>
+		<time>7:15am</time>
+		<time>8:15am</time>
+		<time>9:00am</time>
+		
+	</dailysession>
+	<dailysession day="Saturday">
+		
+		<time>6:45am</time>
+		<time>7:30am</time>
+		
+	</dailysession>
+	<dailysession day="Sunday">
+		
+		<time>8:30am</time>
+		<time>9:15am</time>
+		<time>10:15am</time>
+		<time>11:15am</time>
+		
+	</dailysession>
+</freestylesessions>

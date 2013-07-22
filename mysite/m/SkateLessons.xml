@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SkateClasses>
+  <Class name="Adult 1">
+	<ClassTitle>Adult 1</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Adult 2">
+	<ClassTitle>Adult 2</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+      	<Day>Monday</Day>
+      	<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Adult 3">
+	<ClassTitle>Adult 3</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+      	<Day>Monday</Day>
+      	<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Adult 4">
+	<ClassTitle>Adult 4</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+      	<Day>Monday</Day>
+      	<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Adult FS 1">
+	<ClassTitle>Adult FS 1</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+      	<Day>Monday</Day>
+      	<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Introductory">
+	<ClassTitle>Introductory</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+      	<Day>Monday</Day>
+      	<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+	  	<Day>Tuesday</Day>
+	  	<Time>5:15 PM</Time>
+	  </Option>
+	  <Option>
+	  	<Day>Wednesday</Day>
+	  	<Time>4:30 PM</Time>
+	  </Option>
+	  <Option>
+	  	<Day>Wednesday</Day>
+	  	<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+	  	<Day>Friday</Day>
+	  	<Time>5:30 PM</Time>
+	  </Option>
+	  <Option>
+	  	<Day>Saturday</Day>
+	  	<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 2">
+	<ClassTitle>Basic 2</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:15 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Friday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 3">
+	<ClassTitle>Basic 3</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:45 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 4">
+	<ClassTitle>Basic 4</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:45 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 5">
+	<ClassTitle>Basic 5</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 6">
+	<ClassTitle>Basic 6</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 7">
+	<ClassTitle>Basic 7</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Basic 8">
+	<ClassTitle>Basic 8</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 1">
+	<ClassTitle>Freeskate 1</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 2">
+	<ClassTitle>Freeskate 2</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 3">
+	<ClassTitle>Freeskate 3</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 4">
+	<ClassTitle>Freeskate 4</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 5">
+	<ClassTitle>Freeskate 5</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Freeskate 6">
+	<ClassTitle>Freeskate 6</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Snowbunnies 1">
+	<ClassTitle>Snowbunnies 1</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:15 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>4:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Friday</Day>
+		<Time>5:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Snowbunnies 2">
+	<ClassTitle>Snowbunnies 2</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:15 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>4:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Friday</Day>
+		<Time>5:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Snowbunnies 3">
+	<ClassTitle>Snowbunnies 3</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Monday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:15 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>4:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Friday</Day>
+		<Time>5:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Power">
+  	<ClassTitle>Power</ClassTitle>
+  	<ClassTimeOptions>
+  		<Option>
+  			<Day>Saturday</Day>
+  			<Time>9:00 AM</Time>
+  		</Option>
+  	</ClassTimeOptions>
+  </Class>
+  
+  <!--
+  <Class name="High Power">
+	<ClassTitle>High Power</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Saturday</Day>
+		<Time>8:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  
+  <Class name="Intermediate Low  Power">
+	<ClassTitle>Intermediate / Low  Power</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Saturday</Day>
+		<Time>9:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Jumps">
+	<ClassTitle>Jumps</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Saturday</Day>
+		<Time>9:30 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="HS LTS">
+	<ClassTitle>HS LTS</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Thursday</Day>
+		<Time>12:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  -->
+  
+  <Class name="Moves">
+	<ClassTitle>Moves</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Wednesday</Day>
+		<Time>6:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Patch">
+	<ClassTitle>Patch</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Tuesday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <!--
+  <Class name="Axel Double">
+	<ClassTitle>Axel Double</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Wednesday</Day>
+		<Time>7:00 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  -->
+  
+  <Class name="Spins">
+	<ClassTitle>Spins</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Dance">
+	<ClassTitle>Dance</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Tuesday</Day>
+		<Time>5:45 PM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Synchro">
+	<ClassTitle>Synchro</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Saturday</Day>
+		<Time>11:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Off Ice">
+	<ClassTitle>Off Ice</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Saturday</Day>
+		<Time>10:05 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+  <Class name="Spectrum Skaters">
+	<ClassTitle>Spectrum Skaters</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day>Wednesday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Saturday</Day>
+		<Time>10:00 AM</Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>
+  
+<!--  <Class name="Test">
+	<ClassTitle>Test</ClassTitle>
+    <ClassTimeOptions>
+      <Option>
+		<Day></Day>
+		<Time></Time>
+	  </Option>
+	  <Option>
+		<Day></Day>
+		<Time></Time>
+	  </Option>
+	  <Option>
+		<Day></Day>
+		<Time></Time>
+	  </Option>
+    </ClassTimeOptions>
+  </Class>-->
+</SkateClasses>
