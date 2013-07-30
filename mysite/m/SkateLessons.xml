@@ -63,7 +63,7 @@
 	  </Option>
 	  <Option>
 	  	<Day>Wednesday</Day>
-	  	<Time>4:30 PM</Time>
+	  	<Time>4:00 PM</Time>
 	  </Option>
 	  <Option>
 	  	<Day>Wednesday</Day>
@@ -71,7 +71,7 @@
 	  </Option>
 	  <Option>
 	  	<Day>Friday</Day>
-	  	<Time>5:30 PM</Time>
+	  	<Time>5:00 PM</Time>
 	  </Option>
 	  <Option>
 	  	<Day>Saturday</Day>
@@ -121,6 +121,10 @@
 		<Day>Wednesday</Day>
 		<Time>7:00 PM</Time>
 	  </Option>
+	  	  <Option>
+		<Day>Friday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
 		<Time>10:30 AM</Time>
@@ -143,6 +147,10 @@
 		<Day>Wednesday</Day>
 		<Time>7:00 PM</Time>
 	  </Option>
+	  	  <Option>
+		<Day>Friday</Day>
+		<Time>6:30 PM</Time>
+	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
 		<Time>10:30 AM</Time>
@@ -156,6 +164,10 @@
       <Option>
 		<Day>Monday</Day>
 		<Time>6:00 PM</Time>
+	  </Option>
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:45 PM</Time>
 	  </Option>
 	  <Option>
 		<Day>Wednesday</Day>
@@ -174,6 +186,10 @@
       <Option>
 		<Day>Monday</Day>
 		<Time>6:00 PM</Time>
+	  </Option> 
+	  <Option>
+		<Day>Tuesday</Day>
+		<Time>5:45 PM</Time>
 	  </Option>
 	  <Option>
 		<Day>Wednesday</Day>
@@ -459,7 +475,7 @@
     </ClassTimeOptions>
   </Class>
   
-  <Class name="Patch">
+ <!-- <Class name="Patch">
 	<ClassTitle>Patch</ClassTitle>
     <ClassTimeOptions>
       <Option>
@@ -468,6 +484,7 @@
 	  </Option>
     </ClassTimeOptions>
   </Class>
+  -->
   
   <!--
   <Class name="Axel Double">
@@ -491,7 +508,7 @@
     </ClassTimeOptions>
   </Class>
   
-  <Class name="Dance">
+ <!-- <Class name="Dance">
 	<ClassTitle>Dance</ClassTitle>
     <ClassTimeOptions>
       <Option>
@@ -500,7 +517,7 @@
 	  </Option>
     </ClassTimeOptions>
   </Class>
-  
+  -->
   <Class name="Synchro">
 	<ClassTitle>Synchro</ClassTitle>
     <ClassTimeOptions>
@@ -511,7 +528,7 @@
     </ClassTimeOptions>
   </Class>
   
-  <Class name="Off Ice">
+ <!-- <Class name="Off Ice">
 	<ClassTitle>Off Ice</ClassTitle>
     <ClassTimeOptions>
       <Option>
@@ -519,16 +536,12 @@
 		<Time>10:05 AM</Time>
 	  </Option>
     </ClassTimeOptions>
-  </Class>
+  </Class> -->
   
   <Class name="Spectrum Skaters">
 	<ClassTitle>Spectrum Skaters</ClassTitle>
     <ClassTimeOptions>
-      <Option>
-		<Day>Wednesday</Day>
-		<Time>6:30 PM</Time>
-	  </Option>
-	  <Option>
+     	  <Option>
 		<Day>Saturday</Day>
 		<Time>10:00 AM</Time>
 	  </Option>
