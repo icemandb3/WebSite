@@ -63,16 +63,16 @@ $(document).ready(function() {
     			theThing.options[3]=new Option("Wed 4:00PM", "Wednesday A 4:00PM", false, false)
     			theThing.options[4]=new Option("Wed 6:30PM", "Wednesday B 6:30PM", false, false)
     			theThing.options[5]=new Option("Fri 5:00PM", "Friday 5:00PM", false, false)
-    			theThing.options[6]=new Option("Sat 10:00AM", "Saturday A 10:00AM ", false, false)
+    			theThing.options[6]=new Option("Sat 10:30AM", "Saturday A 10:30AM ", false, false)
     			/*theThing.options[7]=new Option("Sat 11:00AM", "Saturday B 11:00AM ", false, false)*/
     		}
-    	else if ($('select[name="select_class"]').val() == "Summer Snowbunnies 1")
+    	/*else if ($('select[name="select_class"]').val() == "Summer Snowbunnies 1")
     		{
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     			theThing.options[2]=new Option("Sat 11:00AM", "Saturday 11:00AM", false, false)
-       		}
+       		}*/
     	else if ($('select[name="select_class"]').val() == "Snowbunnies 2")
     		{
     			var theThing = document.classes_form.select_day_time;
@@ -82,7 +82,7 @@ $(document).ready(function() {
     			theThing.options[3]=new Option("Wed 4:00PM", "Wednesday A 4:00PM", false, false)
     			theThing.options[4]=new Option("Wed 6:30PM", "Wednesday B 6:30PM", false, false)
     			theThing.options[5]=new Option("Fri 5:00PM", "Friday 5:00PM", false, false)
-    			theThing.options[6]=new Option("Sat 10:00AM", "Saturday A 10:00AM ", false, false)
+    			theThing.options[6]=new Option("Sat 10:30AM", "Saturday A 10:30AM ", false, false)
        		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Snowbunnies 2")
     		{
@@ -100,7 +100,7 @@ $(document).ready(function() {
     			theThing.options[3]=new Option("Wed 4:00PM", "Wednesday A 4:00PM", false, false)
     			theThing.options[4]=new Option("Wed 6:30PM", "Wednesday B 6:30PM", false, false)
     			theThing.options[5]=new Option("Fri 5:00PM", "Friday 5:00PM", false, false)
-    			theThing.options[6]=new Option("Sat 10:00AM", "Saturday A 10:00AM ", false, false)
+    			theThing.options[6]=new Option("Sat 10:30AM", "Saturday A 10:30AM ", false, false)
     			/*theThing.options[7]=new Option("Sat 11:00AM", "Saturday B 11:00AM ", false, false)*/
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Snowbunnies 3")
@@ -119,7 +119,7 @@ $(document).ready(function() {
     			theThing.options[3]=new Option("Wed 4:30PM", "Wednesday A 4:30PM", false, false)
     			theThing.options[4]=new Option("Wed 6:30PM", "Wednesday B 6:30PM", false, false)
     			theThing.options[5]=new Option("Fri 5:30PM", "Friday 5:30PM", false, false)
-    			theThing.options[6]=new Option("Sat 10:00AM", "Saturday A 10:00AM", false, false)
+    			theThing.options[6]=new Option("Sat 10:30AM", "Saturday A 10:30AM", false, false)
     			/*theThing.options[7]=new Option("Sat 11:00AM", "Saturday B 11:00AM", false, false)*/
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Intro")
@@ -154,7 +154,7 @@ $(document).ready(function() {
     			theThing.options[2]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     			theThing.options[3]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
     			theThing.options[4]=new Option("Fri 6:30PM", "Friday 6:30PM", false, false)
-    			theThing.options[5]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[5]=new Option("Sat 10:00AM", "Saturday 10:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Basic 3")
     		{
@@ -171,7 +171,7 @@ $(document).ready(function() {
     			theThing.options[2]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     			theThing.options[3]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
     			theThing.options[4]=new Option("Fri 6:30PM", "Friday 6:30PM", false, false)
-    			theThing.options[5]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[5]=new Option("Sat 10:00AM", "Saturday 10:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Basic 4")
     		{
@@ -187,7 +187,7 @@ $(document).ready(function() {
     			theThing.options[1]=new Option("Mon 6:00PM", "Monday 6:00PM", false, false)
     			theThing.options[2]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     			theThing.options[3]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
-    			theThing.options[4]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[4]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Basic 5")
     		{
@@ -203,7 +203,7 @@ $(document).ready(function() {
     			theThing.options[1]=new Option("Mon 6:00PM", "Monday 6:00PM", false, false)
     			theThing.options[2]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     			theThing.options[3]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
-    			theThing.options[4]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[4]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
     		}
 		/*else if ($('select[name="select_class"]').val() == "Summer Basic 6")
     		{
@@ -218,7 +218,7 @@ $(document).ready(function() {
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
     			theThing.options[2]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
-    			theThing.options[3]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[3]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Basic 7")
     		{
@@ -233,7 +233,7 @@ $(document).ready(function() {
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
     			theThing.options[2]=new Option("Wed 7:00PM", "Wednesday 7:00PM", false, false)
-    			theThing.options[3]=new Option("Sat 10:30AM", "Saturday 10:30AM", false, false)
+    			theThing.options[3]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
     		}
 		/*else if ($('select[name="select_class"]').val() == "Summer Basic 8")
     		{
@@ -247,7 +247,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 1")
     		{
@@ -260,7 +260,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 2")
     		{
@@ -273,7 +273,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 3")
     		{
@@ -286,7 +286,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 6:30PM", "Monday 6:30PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
 		/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 4")
     		{
@@ -299,7 +299,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 7:00PM", "Monday 7:00PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 5")
     		{
@@ -312,7 +312,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Mon 7:00PM", "Monday 7:00PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:30AM", "Saturday 9:30AM", false, false)
+    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	/*else if ($('select[name="select_class"]').val() == "Summer Freeskate 6")
     		{
@@ -397,14 +397,13 @@ $(document).ready(function() {
     		{
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
-    			theThing.options[1]=new Option("Tue 5:15PM", "Tuesday 5:15PM", false, false)
-    			theThing.options[2]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
+    			theThing.options[1]=new Option("Sat 9:00AM", "Saturday 9:00AM", false, false)
     		}
     	else if ($('select[name="select_class"]').val() == "Synchronized Skating")
     		{
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
-    			theThing.options[1]=new Option("Sat 11:00AM", "Saturday 11:00AM", false, false)
+    			theThing.options[1]=new Option("Sat 10:00AM", "Saturday 10:00AM", false, false)
     		}
     	else if ($('select[name="select_class"]').val() == "Moves")
     		{
@@ -436,12 +435,12 @@ $(document).ready(function() {
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Tue 5:45PM", "Tuesday 5:45PM", false, false)
     		}*/
-    	/*else if ($('select[name="select_class"]').val() == "Patch")
+    	else if ($('select[name="select_class"]').val() == "Patch")
     		{
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Choose Day & Time", "daytime", true, true)
     			theThing.options[1]=new Option("Tue 10:00AM", "Tuesday 10:00AM", false, false)
-    		}*/
+    		}
     	/*else if ($('select[name="select_class"]').val() == "Off Ice")
     		{
     			var theThing = document.classes_form.select_day_time;
@@ -608,15 +607,15 @@ $(document).ready(function() {
     		
     	/* Begin Kool Kamp */
     	
-    	else if ($('select[name="select_class"]').val() == "Kool Kamp 1 Wk")
+    	/*else if ($('select[name="select_class"]').val() == "Kool Kamp 1 Wk")
     		{
     			var theThing = document.classes_form.select_day_time;
-    			/*theThing.options[0]=new Option("Select Option","Kool Kamp 1 Wk", true, true)
+    			theThing.options[0]=new Option("Select Option","Kool Kamp 1 Wk", true, true)
     			theThing.options[1]=new Option("June 17 to 21","June 17 to 21", false, false)
     			theThing.options[2]=new Option("June 24 to 28","June 24 to 28", false, false)
     			theThing.options[3]=new Option("July 1 to 5 (Open the 4th)","July 1 to 5 (Open the 4th)", false, false)
     			theThing.options[4]=new Option("July 8 to 12","July 8 to 12", false, false)
-    			theThing.options[5]=new Option("July 15 to 19","July 15 to 19", false, false)*/
+    			theThing.options[5]=new Option("July 15 to 19","July 15 to 19", false, false)
     			theThing.options[6]=new Option("July 22 to 26","July 22 to 26", false, false)
     			theThing.options[7]=new Option("July 29 to August 2","July 29 to August 2", false, false)
     			theThing.options[8]=new Option("August 5 to 9","August 5 to 9", false, false)
@@ -645,7 +644,7 @@ $(document).ready(function() {
     			var theThing = document.classes_form.select_day_time;
     			theThing.options[0]=new Option("Select Option","Kool Kamp 4 Wks", true, true)
     			theThing.options[1]=new Option("Redeemable Anytime","Redeemable Anytime", false, false)
-    		}
+    		}*/
     	});		    	
 });
 

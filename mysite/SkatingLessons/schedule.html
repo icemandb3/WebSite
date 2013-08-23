@@ -32,7 +32,7 @@ var KOOLDEPOS = 50.00;
 
 
 function CheckIfCutoffPassed(){
-		var SignupCutOffDate=new Date("July 28, 2013 23:30");
+		var SignupCutOffDate=new Date("September 15, 2013 23:30");
 		SignupCutOffDate.setHours(21);
 		var cuDate = SignupCutOffDate.toLocaleDateString();
 		var cuTime = SignupCutOffDate.toLocaleTimeString(21);
@@ -92,6 +92,15 @@ $(document).ready(function() {
 		}
 	}
 	
+	/********************************************************************************/
+	/*                                                                              */
+	/* Function name: CreateSkaterNameString                                        */
+	/* Description: Reads values from the name fields in the form and validates     */
+	/* Returns: descriptionName - formatted string containing the name of skater    */
+	/* Created: 10/15/2012                                                          */
+	/********************************************************************************/
+	
+	
 	function CreateSkaterNameString(){
 		var fn = document.forms["classes_form"]["skater_fname"].value;
 		var ln = document.forms["classes_form"]["skater_lname"].value;
@@ -101,6 +110,15 @@ $(document).ready(function() {
 		descriptionName = fn.toUpperCase() + " " + ln.toUpperCase();
 		return descriptionName;
 	}
+	
+	/********************************************************************************/
+	/*                                                                              */
+	/* Function name: DetermineItemType                                             */
+	/* Description: Takes the value from the select on form and assigns it a type   */
+	/* Returns: itemType - string containing the name of the item                   */
+	/* Created: 05/02/2012                                                          */
+	/********************************************************************************/
+	
 	
 	
 	function DetermineItemType(){
@@ -153,6 +171,17 @@ $(document).ready(function() {
 			}
 		}
 	}
+	
+	
+	
+	/*****************************************************************************************/
+	/*                                                                                       */
+	/* Function name: GetKoolKampDuration                                                    */
+	/* Description: Determines which Kool Kamp was selected on the form                      */
+	/* Returns: integer                                                                      */
+	/* Created: 03/05/2013                                                                   */
+	/*****************************************************************************************/
+	
 		
 	function GetKoolKampDuration(){
 		var classTitle = $('select[name="select_class"]').val();
@@ -215,7 +244,7 @@ $(document).ready(function() {
 			var descriptionForCart = SkName + ", " + ItemType + ":" + ItemDayTime;
 			return descriptionForCart;
 		}else{
-			var descriptionForCart = SkName + ", Age:" + SkAge + ", Shirt:" + ShirtSize + ", Kool Kamp:" + ItemDayTime;
+			var descriptionForCart = SkName + ", " + /*", Age:" + SkAge + ", Shirt:" + ShirtSize + ", Kool Kamp:" +*/ ItemDayTime;
 			return descriptionForCart;
 		}
 	} 
@@ -415,8 +444,8 @@ function googlecartAfterAdd(item, index){
 			<h4 style="text-align:center;">Skating Class Certificates available now for only $89.00<br />Public Skate Gift Certificates for $10</h4>		
 		
 			<h4 style="text-align:center; color:#003399;">Registration Now Open 
-			For Semester Starting 7/29/2013<br />
-			7 Week Session, $89.</h4>
+			For Semester Starting 9/16&nbsp; <br />
+			7 Week Session, $89. On Sale until Septermber 15, 9 pm.</h4>
 			
 				<p style="text-align:center">Note: to sign up for more than one class, enter name and select class.  Enter any additional requested information, then click add to cart.  Repeat for additional classes.</p>
 
@@ -458,11 +487,12 @@ function googlecartAfterAdd(item, index){
                 	<option class="product-attribute-course" value="Skate Class Certificate">$89 Skate Class Certificate</option>
                 	<option class="product-attribute-course" value="Public Skate Pass">$10 Public Skate Gift Certificate</option>
                 	</optgroup>
-                	<optgroup label="Kool Kamp">
+                	<!--<optgroup label="Kool Kamp">
                 	<option class="product-attribute-course" value="Kool Kamp 1 Wk">Kool Kamp 1 week $219</option>
                 	<option class="product-attribute-course" value="Kool Kamp Deposit">Kool Kamp deposit - 1 week $50</option>
                 	<option class="product-attribute-course" value="Kool Kamp 4 Wks">Kool Kamp 4 weeks $795</option>
-                	</optgroup>
+                	</optgroup>--!>
+                	
                 	<!--
                 	<optgroup label="Holiday">
                 	<option class="product-attribute-course" style="color:red;" value="Holiday Snowbunnies 1">Holiday Snowbunnies 1</option>
@@ -489,24 +519,34 @@ function googlecartAfterAdd(item, index){
 					<option class="product-attribute-course" style="color:red;" value="Holiday Jumps">Holiday Jumps</option>
 					</optgroup>
 					-->
+                	
                 	<optgroup label="Skate Classes">
                 	<option class="product-attribute-course" value="Snowbunnies 1">Snowbunnies 1</option>
                 	<option class="product-attribute-course" value="Snowbunnies 2">Snowbunnies 2</option>
                 	<option class="product-attribute-course" value="Snowbunnies 3">Snowbunnies 3</option>
-                	<!--<option class="product-attribute-course" value="Summer Snowbunnies 1">Summer Show Snowbunnies 1</option>
+                	
+                	<!--
+                	<option class="product-attribute-course" value="Summer Snowbunnies 1">Summer Show Snowbunnies 1</option>
                 	<option class="product-attribute-course" value="Summer Snowbunnies 2">Summer Show Snowbunnies 2</option>
-                	<option class="product-attribute-course" value="Summer Snowbunnies 3">Summer Show Snowbunnies 3</option>-->
+                	<option class="product-attribute-course" value="Summer Snowbunnies 3">Summer Show Snowbunnies 3</option>
+                	-->
                 	
                 	<option class="product-attribute-course" value="Introductory">Introductory</option>
-                	<!--<option class="product-attribute-course" value="Summer Intro">Summer Show Introductory</option>-->
+                	
+                	<!--
+                	<option class="product-attribute-course" value="Summer Intro">Summer Show Introductory</option>
+                	-->
+                	
                 	<option class="product-attribute-course" value="Adult 1">Adult 1</option>
                     <option class="product-attribute-course" value="Adult 2">Adult 2</option>
                     <option class="product-attribute-course" value="Adult 3">Adult 3</option>
                     <option class="product-attribute-course" value="Adult 4">Adult 4</option>
                     <option class="product-attribute-course" value="Adult FS-1">Adult FS 1+</option>
-                   <!-- <option class="product-attribute-course" value="Summer Adult">Summer Show Adult</option>
-                    <option class="product-attribute-course" value="Summer Boys">Summer Show Boys Group</option>-->
-
+                    
+                    <!--
+                    <option class="product-attribute-course" value="Summer Adult">Summer Show Adult</option>
+                    <option class="product-attribute-course" value="Summer Boys">Summer Show Boys Group</option>
+                    -->
                     
                     <option class="product-attribute-course" value="Basic 2">Basic 2</option>
                     <option class="product-attribute-course" value="Basic 3">Basic 3</option>
@@ -515,13 +555,16 @@ function googlecartAfterAdd(item, index){
                     <option class="product-attribute-course" value="Basic 6">Basic 6</option>
                     <option class="product-attribute-course" value="Basic 7">Basic 7</option>
                     <option class="product-attribute-course" value="Basic 8">Basic 8</option>
-                   <!-- <option class="product-attribute-course" value="Summer Basic 2">Summer Show Basic 2</option>
+                   
+                    <!--
+                    <option class="product-attribute-course" value="Summer Basic 2">Summer Show Basic 2</option>
                     <option class="product-attribute-course" value="Summer Basic 3">Summer Show Basic 3</option>
                     <option class="product-attribute-course" value="Summer Basic 4">Summer Show Basic 4</option>
                     <option class="product-attribute-course" value="Summer Basic 5">Summer Show Basic 5</option>
                     <option class="product-attribute-course" value="Summer Basic 6">Summer Show Basic 6</option>
                     <option class="product-attribute-course" value="Summer Basic 7">Summer Show Basic 7</option>
-                    <option class="product-attribute-course" value="Summer Basic 8">Summer Show Basic 8</option>-->
+                    <option class="product-attribute-course" value="Summer Basic 8">Summer Show Basic 8</option>
+                    -->
                     
                     <option class="product-attribute-course" value="Freeskate 1">Freeskate 1</option>
                     <option class="product-attribute-course" value="Freeskate 2">Freeskate 2</option>
@@ -529,27 +572,35 @@ function googlecartAfterAdd(item, index){
                     <option class="product-attribute-course" value="Freeskate 4">Freeskate 4</option>
                     <option class="product-attribute-course" value="Freeskate 5">Freeskate 5</option>
                     <option class="product-attribute-course" value="Freeskate 6">Freeskate 6</option>
-                   <!-- <option class="product-attribute-course" value="Summer Freeskate 1">Summer Show Freeskate 1</option>
+                    
+                    <!--
+                    <option class="product-attribute-course" value="Summer Freeskate 1">Summer Show Freeskate 1</option>
                     <option class="product-attribute-course" value="Summer Freeskate 2">Summer Show Freeskate 2</option>
                     <option class="product-attribute-course" value="Summer Freeskate 3">Summer Show Freeskate 3</option>
                     <option class="product-attribute-course" value="Summer Freeskate 4">Summer Show Freeskate 4</option>
                     <option class="product-attribute-course" value="Summer Freeskate 5">Summer Show Freeskate 5</option>
-                    <option class="product-attribute-course" value="Summer Freeskate 6">Summer Show Freeskate 6</option>-->
-
-                    
-                    
+                    <option class="product-attribute-course" value="Summer Freeskate 6">Summer Show Freeskate 6</option>
+                    -->
+                                        
                     <option class="product-attribute-course" value="Power">Power</option>
                     <option class="product-attribute-course" value="Synchronized Skating">Synchronized Skating</option>
                     <option class="product-attribute-course" value="Moves">Moves</option>
                     
                     <option class="product-attribute-course" value="Spins">Spins</option>
-                   <!-- <option class="product-attribute-course" value="Patch">Patch</option>-->
                     
-                    <!--<option class="product-attribute-course" value="Dance 1">Dance 1</option>
-                    <option class="product-attribute-course" value="Off Ice">Off Ice</option>-->
+                    
+                    <option class="product-attribute-course" value="Patch">Patch</option>
+                    
+                    
+                    <!--
+                    <option class="product-attribute-course" value="Dance 1">Dance 1</option>
+                    <option class="product-attribute-course" value="Off Ice">Off Ice</option>
+                    -->
+                    
                     <option class="product-attribute-course" value="Spectrum Skaters">Spectrum Skaters</option>
                     </optgroup>
                 	</select><br />
+                	
                 	<!--
                 	<option class="product-attribute-course" value="Int-Low-Power">Int/Low Power</option>
                     <option class="product-attribute-course" value="Low-Power Off Ice">Low Power - Off Ice</option>
@@ -560,10 +611,11 @@ function googlecartAfterAdd(item, index){
                     <option class="product-attribute-course" value="Axel Plus">Axel</option>
                     <option class="product-attribute-course" value="Adult Specialty">Adult Specialty</option>
                     -->
+                	
                 	</td>
                 </tr>
                 
-                <tr class="skaterAgeSize" style="display:none;">
+               <!-- <tr class="skaterAgeSize" style="display:none;">
             		<td  style="text-align:right; width:30%;">
                 	<label>Skater's Shirt Size<span style="color:red;">*</span></label>
                 	</td>
@@ -575,7 +627,8 @@ function googlecartAfterAdd(item, index){
                 		<option class="shirt_size" value="Large">Large</option>
                 	</select>
             		</td>
-            	</tr>
+            	</tr> 
+            
             	
             	<tr class="skaterAgeSize" style="display:none;">
             		<td  style="text-align:right; width:30%;">
@@ -596,7 +649,7 @@ function googlecartAfterAdd(item, index){
             		</td>
             	</tr>
                 
-                
+                -->
                 <tr>
                 	<td  style="text-align:right; width:30%;">
                 	<label>Day &amp; Time<span style="color:red;">*</span></label>
@@ -631,9 +684,8 @@ function googlecartAfterAdd(item, index){
             </fieldset>                
             </form>
             
-			<p><a href="../E13_lts_brochure_7_0_2013%20(1)PS.pdf">Skate School 
+			<p><a href="../F13_lts_brochure_8_9_2013%20(1).pdf">Skate School 
 			Brochure</a></p>
-			<p><a href="../Kool_Kamp_Flyer_2013Cactus2.pdf">Kool Kamp Brochure</a></p>
 			<p>&nbsp;</p>
 			<p>If you are just starting out with lessons, we recommend you sign 
 			up for one of our beginning classes, depending on your age. If you 
