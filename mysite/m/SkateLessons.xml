@@ -63,7 +63,7 @@
 	  </Option>
 	  <Option>
 	  	<Day>Wednesday</Day>
-	  	<Time>4:00 PM</Time>
+	  	<Time>4:30 PM</Time>
 	  </Option>
 	  <Option>
 	  	<Day>Wednesday</Day>
@@ -71,11 +71,11 @@
 	  </Option>
 	  <Option>
 	  	<Day>Friday</Day>
-	  	<Time>5:00 PM</Time>
+	  	<Time>5:30 PM</Time>
 	  </Option>
 	  <Option>
 	  	<Day>Saturday</Day>
-	  	<Time>10:00 AM</Time>
+	  	<Time>10:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -127,7 +127,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>10:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -153,7 +153,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>10:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -175,7 +175,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>9:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -197,7 +197,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>9:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -215,7 +215,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>9:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -233,7 +233,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:30 AM</Time>
+		<Time>9:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -247,7 +247,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -261,7 +261,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -275,7 +275,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -289,7 +289,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -303,7 +303,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -317,7 +317,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>9:30 AM</Time>
+		<Time>9:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -347,7 +347,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:00 AM</Time>
+		<Time>10:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -377,7 +377,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:00 AM</Time>
+		<Time>10:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -407,7 +407,7 @@
 	  </Option>
 	  <Option>
 		<Day>Saturday</Day>
-		<Time>10:00 AM</Time>
+		<Time>10:30 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
@@ -417,7 +417,7 @@
   	<ClassTimeOptions>
   		<Option>
   			<Day>Saturday</Day>
-  			<Time>9:00 AM</Time>
+  			<Time>8:30 AM</Time>
   		</Option>
   	</ClassTimeOptions>
   </Class>
@@ -475,7 +475,7 @@
     </ClassTimeOptions>
   </Class>
   
- <!-- <Class name="Patch">
+  <Class name="Patch">
 	<ClassTitle>Patch</ClassTitle>
     <ClassTimeOptions>
       <Option>
@@ -484,7 +484,7 @@
 	  </Option>
     </ClassTimeOptions>
   </Class>
-  -->
+  
   
   <!--
   <Class name="Axel Double">
@@ -523,7 +523,7 @@
     <ClassTimeOptions>
       <Option>
 		<Day>Saturday</Day>
-		<Time>11:00 AM</Time>
+		<Time>10:00 AM</Time>
 	  </Option>
     </ClassTimeOptions>
   </Class>
