@@ -8,13 +8,13 @@
 <!-- #BeginEditable "doctitle" -->
 <title>Lloyd Center Ice Rink</title>
 
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="../js/skatelessons.js"></script>
 
 <!-- #EndEditable -->
 <link href="../styles/style3.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../js/jquery-1.7.2.min"></script>
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
 <!-- #BeginEditable "userscripts" -->
 
@@ -26,9 +26,6 @@ var SKATECLASSCOST = 89.00;
 var MULTISKDISC = 21.00;
 var MULTICHRISDISC = 59.00;
 var EARLYDISC = 9.00;
-var MULTIKOOL = 795.00;
-var SINGLEKOOL = 219.00;
-var KOOLDEPOS = 50.00;
 
 
 function CheckIfCutoffPassed(){
@@ -125,15 +122,11 @@ $(document).ready(function() {
 		var itemType = $('select[name="select_class"]').val();
 		var CheckForCertificate = /Certificate$/;
 		var CheckForPass = /Pass$/;
-		var CheckForKoolKamp = /^Kool/;
 		if(CheckForCertificate.exec(itemType)){
 			itemType = CheckForCertificate.exec(itemType);
 			return itemType;
 		} else if (CheckForPass.exec(itemType)) {
 			itemType = CheckForPass.exec(itemType);
-			return itemType;
-		} else if (CheckForKoolKamp.exec(itemType)) {
-			itemType = CheckForKoolKamp.exec(itemType);
 			return itemType;
 		} else {
 			itemType = "Lesson";
@@ -210,18 +203,6 @@ $(document).ready(function() {
 		} else if (ItemType == "Pass"){
 			cost = SKATEPASS;
 			return cost;
-		} else if (ItemType == "Kool"){
-			var KoolDuration = GetKoolKampDuration();
-			if (KoolDuration == 1) {
-				cost = SINGLEKOOL;
-				return cost; 
-			} else if (KoolDuration == 4){
-				cost = MULTIKOOL;
-				return cost;
-			} else {
-				cost = KOOLDEPOS;
-				return cost;
-			}
 		} else {
 			var cutOffPassed = CheckIfCutoffPassed();
 			var initialClass = CheckIfIsIntitialLesson(SkaterName,ItemType);
@@ -239,14 +220,9 @@ $(document).ready(function() {
 		}
 	}
 	
-	function BuildDescription(SkName,SkAge,ShirtSize,ItemType,ItemDayTime){
-		if(SkAge == "null" && ShirtSize == "null"){
+	function BuildDescription(SkName,ItemType,ItemDayTime){
 			var descriptionForCart = SkName + ", " + ItemType + ":" + ItemDayTime;
 			return descriptionForCart;
-		}else{
-			var descriptionForCart = SkName + ", " + /*", Age:" + SkAge + ", Shirt:" + ShirtSize + ", Kool Kamp:" +*/ ItemDayTime;
-			return descriptionForCart;
-		}
 	} 
 	
 	
@@ -277,8 +253,6 @@ $(document).ready(function() {
 		
 		var skaterNameString = CreateSkaterNameString();
 		var itemType = DetermineItemType();
-		var skaterAge = $('#select_age option:selected').val();
-		var shirtSize = $('#select_shirt_size option:selected').val();
 		var classDayTime = $('#select_day_time option:selected').val();
 		var cartCount = googlecart.getTotalQuantity();
 		if(itemType == "Lesson" && cartCount > 0){
@@ -292,7 +266,7 @@ $(document).ready(function() {
 		}
 		
 		var itemCost = DetermineCost(skaterNameString, itemType);
-		var orderItemDescription = BuildDescription(skaterNameString,skaterAge,shirtSize,itemType,classDayTime);
+		var orderItemDescription = BuildDescription(skaterNameString,itemType,classDayTime);
 		
 		$('.product-attr-description').val(orderItemDescription);
 		$('#product-price').val(itemCost);
@@ -684,9 +658,7 @@ function googlecartAfterAdd(item, index){
             </fieldset>                
             </form>
             
-			<p>Our Shopping Cart has a glitch... If you sign up for two or more 
-			classes to the same student name, we will manually apply the second 
-			class discount.</p>
+			
 			<p><a href="../F13_lts_brochure_8_9_2013%20(1).pdf">Skate School 
 			Brochure</a></p>
 			<p>&nbsp;</p>
